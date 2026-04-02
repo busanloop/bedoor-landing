@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="meta.title">BEDOOR - Local to Global Gateway</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#e8eff2",
+              "on-surface": "#161d1f",
+              "on-secondary-fixed": "#001f27",
+              "surface-container-high": "#e2e9ed",
+              "on-secondary-container": "#005c70",
+              "on-primary-fixed": "#001b3d",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#87a0cd",
+              "surface": "#f4fafe",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#241a03",
+              "tertiary": "#291f06",
+              "inverse-surface": "#2b3134",
+              "on-primary-fixed-variant": "#2e476f",
+              "error": "#ba1a1a",
+              "surface-tint": "#465f88",
+              "primary-fixed": "#d6e3ff",
+              "on-error": "#ffffff",
+              "surface-variant": "#dde3e7",
+              "inverse-on-surface": "#ebf2f5",
+              "primary": "#002046",
+              "on-tertiary-fixed-variant": "#524528",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#d7c49f",
+              "background": "#f4fafe",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#44474e",
+              "outline": "#74777f",
+              "secondary-container": "#50d9fe",
+              "on-tertiary-container": "#ae9c79",
+              "surface-bright": "#f4fafe",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#4cd6fb",
+              "inverse-primary": "#aec7f7",
+              "primary-container": "#1b365d",
+              "surface-container-low": "#eef5f8",
+              "tertiary-fixed": "#f4e0b9",
+              "outline-variant": "#c4c6cf",
+              "surface-dim": "#d4dbdf",
+              "on-secondary-fixed-variant": "#004e5f",
+              "secondary": "#00677d",
+              "surface-container-highest": "#dde3e7",
+              "secondary-fixed": "#b3ebff",
+              "tertiary-container": "#403419",
+              "primary-fixed-dim": "#aec7f7",
+              "on-background": "#161d1f"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        background-color: rgba(244, 250, 254, 0.8);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- 1. Header: TopNavBar -->
+<nav class="bg-[#f4fafe]/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_12px_40px_rgba(0,32,70,0.06)] dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center">
+<img alt="BEDOOR Logo" class="h-8 w-auto object-contain" src="assets/images/bedoor-logo.png"/>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" aria-hidden="true" data-icon="language">language</span>
+<label class="sr-only" for="lang-select" data-i18n="nav.languageLabel">언어 선택</label>
+<select id="lang-select" class="w-24 bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-3 py-2 text-sm text-on-surface-variant focus:ring-2 focus:ring-secondary/50 focus:border-transparent">
+<option value="ko">한국어</option>
+<option value="en">English</option>
+<option value="ja">日本語</option>
+<option value="zh">中文</option>
+</select>
+</div>
+</div>
+</nav>
+<!-- 2. Hero Section -->
+<header class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="High-end modern architectural interior with large glass windows overlooking a global city skyline at twilight, soft blue tones" src="assets/images/bedoor-hero-bg.png"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-secondary/10 px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-bold tracking-widest text-secondary uppercase" data-i18n="hero.badge">Global Business Curator</span>
+</div>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-primary leading-[1.1] tracking-tight">
+<span data-i18n="hero.headlineTop">Local to Global,</span><br/>
+<span class="text-secondary" data-i18n="hero.headlineBottom">로컬에서 시작해 글로벌로 도약하다</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-lg leading-relaxed font-light" data-i18n="hero.subcopy">
+                    단순한 행사를 넘어 새로운 비즈니스 가치를 창출합니다. 
+                    우리는 지역의 잠재력을 발굴하여 세계 무대의 중심으로 연결합니다.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<p class="font-bold text-primary" data-i18n="hero.pill1Title">Incubating</p>
+<p class="text-xs text-on-surface-variant" data-i18n="hero.pill1Desc">Startup Growth</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="font-bold text-primary">MICE</p>
+<p class="text-xs text-on-surface-variant" data-i18n="hero.pill2Desc">Premium Events</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</div>
+<div>
+<p class="font-bold text-primary" data-i18n="hero.pill3Title">Global Support</p>
+<p class="text-xs text-on-surface-variant" data-i18n="hero.pill3Desc">Global Network</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- 3. About Us -->
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 relative">
+<div class="rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/5] object-cover" data-alt="Portrait of professional female business leader in a modern office, confident expression, natural light" src="assets/images/bedoor-about-portrait.png"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-xl text-white shadow-xl max-w-[240px]">
+<p class="text-4xl font-black mb-1">100+</p>
+<p class="text-sm font-light opacity-80 uppercase tracking-widest" data-i18n="about.statLabel">Global Projects Completed</p>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-10">
+<div>
+<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="about.kicker">Vision &amp; Trust</h2>
+<h3 class="text-4xl font-headline font-bold text-primary mb-6 leading-tight" data-i18n-br="about.headline">지속 가능한 비즈니스 생태계를 구축하는 <br/>당신의 글로벌 파트너</h3>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="about.body">
+                            BEDOOR는 경계를 넘나드는 연결의 힘을 믿습니다. 부산에서 시작하여 글로벌 무대까지, 우리는 차세대 리더들을 육성하고 수준 높은 비즈니스 플랫폼을 제공함으로써 혁신의 가치를 증명해왔습니다.
+                        </p>
+</div>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-bold text-primary mb-1" data-i18n="about.feature1Title">Female &amp; Youth-Owned</h4>
+<p class="text-sm text-on-surface-variant" data-i18n="about.feature1Body">여성 및 청년 기업으로서 창의적이고 유연한 시각으로 비즈니스를 선도합니다.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="camera_enhance">camera_enhance</span>
+<div>
+<h4 class="font-bold text-primary mb-1" data-i18n="about.feature2Title">Production Confirmed</h4>
+<p class="text-sm text-on-surface-variant" data-i18n="about.feature2Body">전시기획 및 사진촬영 제작 확인을 완료하여 전문 기술력을 보증합니다.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="travel_explore">travel_explore</span>
+<div>
+<h4 class="font-bold text-primary mb-1" data-i18n="about.feature3Title">Tourism Registered</h4>
+<p class="text-sm text-on-surface-variant" data-i18n="about.feature3Body">관광사업자 등록을 통해 정식 라이선스를 보유한 신뢰할 수 있는 기관입니다.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="handshake">handshake</span>
+<div>
+<h4 class="font-bold text-primary mb-1" data-i18n="about.feature4Title">Public Sector Partners</h4>
+<p class="text-sm text-on-surface-variant" data-i18n="about.feature4Body">정부 부처 및 공공기관과의 긴밀한 협력을 통해 프로젝트의 신뢰도를 높입니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Our Services -->
+<section class="py-24" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="services.kicker">Core Competencies</h2>
+<h3 class="text-4xl font-headline font-bold text-primary" data-i18n="services.headline">비즈니스 가치를 현실로 만드는 전문 서비스</h3>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Incubating -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="biotech">biotech</span>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.incubating.title">Incubating</h4>
+<p class="text-on-surface-variant mb-6 leading-relaxed" data-i18n="services.incubating.body">로컬 크리에이터와 스타트업이 자생력을 갖추고 성장할 수 있도록 전문 멘토링, 교육, 인프라를 지원합니다.</p>
+<ul class="space-y-3 mb-8 text-sm font-medium text-primary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.incubating.b1">BM 고도화 컨설팅</span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.incubating.b2">투자 유치 IR 지원</span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.incubating.b3">창업 교육 프로그램</span></li>
+</ul>
+</div>
+<!-- MICE -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="stadium">stadium</span>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.mice.title">Premium MICE</h4>
+<p class="text-on-surface-variant mb-6 leading-relaxed" data-i18n="services.mice.body">대규모 컨퍼런스부터 전문 전시회까지, 창의적인 기획과 완벽한 운영으로 최상의 비즈니스 네트워킹을 제공합니다.</p>
+<ul class="space-y-3 mb-8 text-sm font-medium text-primary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.mice.b1">국제 회의 기획 및 운영</span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.mice.b2">비즈니스 매칭 포럼</span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.mice.b3">하이브리드 이벤트 솔루션</span></li>
+</ul>
+</div>
+<!-- Global Networking -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="language_international">language_international</span>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.global.title">Global Networking</h4>
+<p class="text-on-surface-variant mb-6 leading-relaxed" data-i18n="services.global.body">전 세계 해외 거점 네트워크를 활용하여 로컬 기업의 해외 시장 진출과 글로벌 파트너십 구축을 돕습니다.</p>
+<ul class="space-y-3 mb-8 text-sm font-medium text-primary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.global.b1">해외 시장 진출 전략</span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.global.b2">해외 바이어 매칭</span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.global.b3">글로벌 역량 강화 교육</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Track Record (Portfolio) -->
+<section class="py-24 bg-primary text-white overflow-hidden" id="track-record">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-secondary-fixed font-bold tracking-widest uppercase text-sm mb-4" data-i18n="portfolio.kicker">Our Portfolio</h2>
+<h3 class="text-4xl font-headline font-bold" data-i18n-br="portfolio.headline">수치와 결과로 증명하는 <br/>BEDOOR의 전문성</h3>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Vibrant youth community event with bright lighting and diverse group of young entrepreneurs collaborating in a modern workspace" src="assets/images/bedoor-portfolio-1.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="text-secondary-fixed text-xs font-bold tracking-wider uppercase mb-2 block">Incubating</span>
+<h4 class="text-xl font-bold mb-2" data-i18n="portfolio.p1.title">금정 청년 로컬 크리에이터</h4>
+<p class="text-sm text-white/70" data-i18n="portfolio.p1.body">지역 자원을 활용한 청년 창업가 육성 및 비즈니스 모델링 지원</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A grand financial conference hall with professional stage lighting and corporate branding for Busan Finance Week" src="assets/images/bedoor-portfolio-2.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="text-secondary-fixed text-xs font-bold tracking-wider uppercase mb-2 block">MICE</span>
+<h4 class="text-xl font-bold mb-2">Busan Finance Week</h4>
+<p class="text-sm text-white/70" data-i18n="portfolio.p2.body">금융 도시 부산의 핵심 글로벌 금융 컨퍼런스 기획 및 총괄 운영</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative aspect-[3/4] rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="International business meeting in Vietnam with professional delegates discussing global strategy at a polished mahogany table" src="assets/images/bedoor-portfolio-3.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="text-secondary-fixed text-xs font-bold tracking-wider uppercase mb-2 block">Global Support</span>
+<h4 class="text-xl font-bold mb-2">Vietnam Overseas Support</h4>
+<p class="text-sm text-white/70" data-i18n="portfolio.p3.body">베트남 시장 진출을 위한 현지 네트워크 연계 및 비즈니스 매칭</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Contact Us / Lead Form -->
+<section class="py-24" id="contact">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-2 gap-20">
+<div class="space-y-12">
+<div>
+<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="contact.kicker">Contact Us</h2>
+<h3 class="text-4xl font-headline font-bold text-primary mb-6" data-i18n-br="contact.headline">글로벌 비즈니스의 새로운 장을 <br/>함께 열어갑니다.</h3>
+<p class="text-on-surface-variant" data-i18n="contact.body">프로젝트 문의, 파트너십 제안 등 BEDOOR의 도움이 필요하시다면 언제든 연락주세요.</p>
+</div>
+<div class="space-y-6">
+<div class="flex gap-6 items-center">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider" data-i18n="contact.addressLabel">Address</p>
+<p class="font-medium" data-i18n="contact.addressValue">부산광역시 수영구 과정로41번길 20, 8층</p>
+</div>
+</div>
+<div class="flex gap-6 items-center">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider" data-i18n="contact.emailLabel">Email</p>
+<p class="font-medium">bedoor.co@gmail.com</p>
+</div>
+</div>
+<div class="flex gap-6 items-center">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider" data-i18n="contact.phoneLabel">Phone</p>
+<p class="font-medium">010-9049-2091</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl shadow-xl shadow-primary/5 border border-outline-variant/10">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.nameLabel">성함</label>
+<input class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.namePlaceholder" placeholder="홍길동" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.phoneLabel">연락처</label>
+<input class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.phonePlaceholder" placeholder="010-0000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.emailLabel">이메일 주소</label>
+<input class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.emailPlaceholder" placeholder="example@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.typeLabel">문의 유형</label>
+<select class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 text-on-surface-variant">
+<option data-i18n="form.typeOption1">인큐베이팅 문의</option>
+<option data-i18n="form.typeOption2">MICE/전시 문의</option>
+<option data-i18n="form.typeOption3">글로벌 진출 문의</option>
+<option data-i18n="form.typeOption4">기타</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.messageLabel">문의 내용</label>
+<textarea class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.messagePlaceholder" placeholder="문의하실 내용을 상세히 적어주세요." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:bg-secondary transition-all shadow-lg shadow-primary/20" type="submit" data-i18n="form.submit">문의 보내기</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#002046] dark:bg-slate-950 full-width relative border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto text-white">
+<div class="md:col-span-1 space-y-6">
+<img alt="BEDOOR Logo" class="h-8 w-auto object-contain invert brightness-0" src="assets/images/bedoor-logo.png"/>
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-300" data-i18n-br="footer.tagline">
+                    Local to Global Gateway.<br/>
+                    지역의 가치를 세계로 잇는 비즈니스 큐레이터
+                </p>
+</div>
+<div class="space-y-6">
+<h5 class="text-sm font-bold text-secondary-fixed uppercase tracking-widest" data-i18n="footer.company">Company</h5>
+<ul class="space-y-4 font-['Inter'] text-sm">
+<li data-i18n="footer.ceo">CEO: 김혜지</li>
+<li data-i18n="footer.address">Address: 부산광역시 수영구 과정로41번길 20, 8층</li>
+<li data-i18n="footer.registration">Registration: Tourism &amp; Exhibition Production</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-sm font-bold text-secondary-fixed uppercase tracking-widest" data-i18n="footer.links">Links</h5>
+<ul class="space-y-4 font-['Inter'] text-sm">
+<li><a class="text-slate-300 hover:text-white transition-all" href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+<li><a class="text-slate-300 hover:text-white transition-all" href="#" data-i18n="footer.terms">Terms of Service</a></li>
+<li><a class="text-slate-300 hover:text-white transition-all" href="#" data-i18n="footer.sitemap">Sitemap</a></li>
+<li><a class="text-slate-300 hover:text-white transition-all" href="#" data-i18n="footer.globalNetwork">Global Network</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-sm font-bold text-secondary-fixed uppercase tracking-widest" data-i18n="footer.newsletter">Newsletter</h5>
+<p class="text-xs text-slate-400" data-i18n="footer.newsletterBody">최신 비즈니스 트렌드와 소식을 받아보세요.</p>
+<div class="flex">
+<input class="bg-white/10 border-0 text-white rounded-l-lg px-4 py-2 w-full text-sm" data-i18n-placeholder="footer.newsletterPlaceholder" placeholder="Email" type="email"/>
+<button class="bg-secondary px-4 py-2 rounded-r-lg">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Inter'] text-xs text-slate-400 opacity-100 transition-opacity">© 2024 BEDOOR. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="language">language</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="share">share</span></a>
+</div>
+</div>
+</footer>
+<script>
+      (function () {
+        const STORAGE_KEY = "bedoor.lang";
+        const SUPPORTED = ["ko", "en", "ja", "zh"];
+
+        const translations = {
+          ko: {
+            "meta.title": "BEDOOR - Local to Global Gateway",
+            "nav.languageLabel": "언어 선택",
+            "lang.ko": "한국어",
+            "lang.en": "English",
+            "lang.ja": "日本語",
+            "lang.zh": "中文",
+
+            "hero.badge": "Global Business Curator",
+            "hero.headlineTop": "Local to Global,",
+            "hero.headlineBottom": "로컬에서 시작해 글로벌로 도약하다",
+            "hero.subcopy":
+              "단순한 행사를 넘어 새로운 비즈니스 가치를 창출합니다. 우리는 지역의 잠재력을 발굴하여 세계 무대의 중심으로 연결합니다.",
+            "hero.pill1Title": "Incubating",
+            "hero.pill1Desc": "Startup Growth",
+            "hero.pill2Desc": "Premium Events",
+            "hero.pill3Title": "Global Support",
+            "hero.pill3Desc": "Global Network",
+
+            "about.statLabel": "Global Projects Completed",
+            "about.kicker": "Vision & Trust",
+            "about.headline": "지속 가능한 비즈니스 생태계를 구축하는\n당신의 글로벌 파트너",
+            "about.body":
+              "BEDOOR는 경계를 넘나드는 연결의 힘을 믿습니다. 부산에서 시작하여 글로벌 무대까지, 우리는 차세대 리더들을 육성하고 수준 높은 비즈니스 플랫폼을 제공함으로써 혁신의 가치를 증명해왔습니다.",
+            "about.feature1Title": "Female & Youth-Owned",
+            "about.feature1Body": "여성 및 청년 기업으로서 창의적이고 유연한 시각으로 비즈니스를 선도합니다.",
+            "about.feature2Title": "Production Confirmed",
+            "about.feature2Body": "전시기획 및 사진촬영 제작 확인을 완료하여 전문 기술력을 보증합니다.",
+            "about.feature3Title": "Tourism Registered",
+            "about.feature3Body": "관광사업자 등록을 통해 정식 라이선스를 보유한 신뢰할 수 있는 기관입니다.",
+            "about.feature4Title": "Public Sector Partners",
+            "about.feature4Body": "정부 부처 및 공공기관과의 긴밀한 협력을 통해 프로젝트의 신뢰도를 높입니다.",
+
+            "services.kicker": "Core Competencies",
+            "services.headline": "비즈니스 가치를 현실로 만드는 전문 서비스",
+            "services.incubating.title": "Incubating",
+            "services.incubating.body":
+              "로컬 크리에이터와 스타트업이 자생력을 갖추고 성장할 수 있도록 전문 멘토링, 교육, 인프라를 지원합니다.",
+            "services.incubating.b1": "BM 고도화 컨설팅",
+            "services.incubating.b2": "투자 유치 IR 지원",
+            "services.incubating.b3": "창업 교육 프로그램",
+            "services.mice.title": "Premium MICE",
+            "services.mice.body":
+              "대규모 컨퍼런스부터 전문 전시회까지, 창의적인 기획과 완벽한 운영으로 최상의 비즈니스 네트워킹을 제공합니다.",
+            "services.mice.b1": "국제 회의 기획 및 운영",
+            "services.mice.b2": "비즈니스 매칭 포럼",
+            "services.mice.b3": "하이브리드 이벤트 솔루션",
+            "services.global.title": "Global Networking",
+            "services.global.body":
+              "전 세계 해외 거점 네트워크를 활용하여 로컬 기업의 해외 시장 진출과 글로벌 파트너십 구축을 돕습니다.",
+            "services.global.b1": "해외 시장 진출 전략",
+            "services.global.b2": "해외 바이어 매칭",
+            "services.global.b3": "글로벌 역량 강화 교육",
+
+            "portfolio.kicker": "Our Portfolio",
+            "portfolio.headline": "수치와 결과로 증명하는\nBEDOOR의 전문성",
+            "portfolio.p1.title": "금정 청년 로컬 크리에이터",
+            "portfolio.p1.body": "지역 자원을 활용한 청년 창업가 육성 및 비즈니스 모델링 지원",
+            "portfolio.p2.body": "금융 도시 부산의 핵심 글로벌 금융 컨퍼런스 기획 및 총괄 운영",
+            "portfolio.p3.body": "베트남 시장 진출을 위한 현지 네트워크 연계 및 비즈니스 매칭",
+
+            "contact.kicker": "Contact Us",
+            "contact.headline": "글로벌 비즈니스의 새로운 장을\n함께 열어갑니다.",
+            "contact.body": "프로젝트 문의, 파트너십 제안 등 BEDOOR의 도움이 필요하시다면 언제든 연락주세요.",
+            "contact.addressLabel": "Address",
+            "contact.addressValue": "부산광역시 수영구 과정로41번길 20, 8층",
+            "contact.emailLabel": "Email",
+            "contact.phoneLabel": "Phone",
+
+            "form.nameLabel": "성함",
+            "form.namePlaceholder": "홍길동",
+            "form.phoneLabel": "연락처",
+            "form.phonePlaceholder": "010-0000-0000",
+            "form.emailLabel": "이메일 주소",
+            "form.emailPlaceholder": "example@email.com",
+            "form.typeLabel": "문의 유형",
+            "form.typeOption1": "인큐베이팅 문의",
+            "form.typeOption2": "MICE/전시 문의",
+            "form.typeOption3": "글로벌 진출 문의",
+            "form.typeOption4": "기타",
+            "form.messageLabel": "문의 내용",
+            "form.messagePlaceholder": "문의하실 내용을 상세히 적어주세요.",
+            "form.submit": "문의 보내기",
+
+            "footer.tagline": "Local to Global Gateway.\n지역의 가치를 세계로 잇는 비즈니스 큐레이터",
+            "footer.company": "Company",
+            "footer.ceo": "CEO: 김혜지",
+            "footer.address": "Address: 부산광역시 수영구 과정로41번길 20, 8층",
+            "footer.registration": "Registration: Tourism & Exhibition Production",
+            "footer.links": "Links",
+            "footer.privacy": "Privacy Policy",
+            "footer.terms": "Terms of Service",
+            "footer.sitemap": "Sitemap",
+            "footer.globalNetwork": "Global Network",
+            "footer.newsletter": "Newsletter",
+            "footer.newsletterBody": "최신 비즈니스 트렌드와 소식을 받아보세요.",
+            "footer.newsletterPlaceholder": "Email",
+          },
+
+          en: {
+            "meta.title": "BEDOOR - Local to Global Gateway",
+            "nav.languageLabel": "Select language",
+            "lang.ko": "Korean",
+            "lang.en": "English",
+            "lang.ja": "Japanese",
+            "lang.zh": "Chinese",
+
+            "hero.badge": "Global Business Curator",
+            "hero.headlineTop": "Local to Global,",
+            "hero.headlineBottom": "From local roots to global impact",
+            "hero.subcopy":
+              "Beyond events, we create new business value. We uncover local potential and connect it to the center of the global stage.",
+            "hero.pill1Title": "Incubating",
+            "hero.pill1Desc": "Startup Growth",
+            "hero.pill2Desc": "Premium Events",
+            "hero.pill3Title": "Global Support",
+            "hero.pill3Desc": "Global Network",
+
+            "about.statLabel": "Global Projects Completed",
+            "about.kicker": "Vision & Trust",
+            "about.headline": "Your global partner\nbuilding sustainable business ecosystems",
+            "about.body":
+              "BEDOOR believes in the power of connection across borders. From Busan to the global stage, we have proven the value of innovation by nurturing next-generation leaders and delivering premium business platforms.",
+            "about.feature1Title": "Female & Youth-Owned",
+            "about.feature1Body": "As a women- and youth-owned company, we lead with a creative and agile perspective.",
+            "about.feature2Title": "Production Confirmed",
+            "about.feature2Body": "Certified for exhibition planning and photography production, ensuring professional capabilities.",
+            "about.feature3Title": "Tourism Registered",
+            "about.feature3Body": "A trusted organization with an official tourism business license.",
+            "about.feature4Title": "Public Sector Partners",
+            "about.feature4Body": "We elevate trust through close collaboration with ministries and public institutions.",
+
+            "services.kicker": "Core Competencies",
+            "services.headline": "Professional services that turn business value into reality",
+            "services.incubating.title": "Incubating",
+            "services.incubating.body":
+              "We support local creators and startups with mentoring, education, and infrastructure to build resilience and grow.",
+            "services.incubating.b1": "Business model advancement consulting",
+            "services.incubating.b2": "IR & fundraising support",
+            "services.incubating.b3": "Entrepreneurship education programs",
+            "services.mice.title": "Premium MICE",
+            "services.mice.body":
+              "From large conferences to specialized exhibitions, we deliver world-class business networking through creative planning and flawless execution.",
+            "services.mice.b1": "International conference planning & operations",
+            "services.mice.b2": "Business matching forums",
+            "services.mice.b3": "Hybrid event solutions",
+            "services.global.title": "Global Networking",
+            "services.global.body":
+              "Leveraging overseas hubs worldwide, we help local companies enter global markets and build partnerships.",
+            "services.global.b1": "Go-to-market strategy",
+            "services.global.b2": "Overseas buyer matching",
+            "services.global.b3": "Global capability-building programs",
+
+            "portfolio.kicker": "Our Portfolio",
+            "portfolio.headline": "Expertise proven\nby numbers and results",
+            "portfolio.p1.title": "Geumjeong Youth Local Creators",
+            "portfolio.p1.body": "Nurturing young founders and supporting business modeling using local resources",
+            "portfolio.p2.body": "Planning and operating Busan’s flagship global finance conference",
+            "portfolio.p3.body": "Connecting local networks and business matching for Vietnam market entry",
+
+            "contact.kicker": "Contact Us",
+            "contact.headline": "Opening a new chapter\nin global business together",
+            "contact.body": "For project inquiries, partnership proposals, and more—reach out anytime.",
+            "contact.addressLabel": "Address",
+            "contact.addressValue": "8F, 20 Gwajeong-ro 41beon-gil, Suyeong-gu, Busan",
+            "contact.emailLabel": "Email",
+            "contact.phoneLabel": "Phone",
+
+            "form.nameLabel": "Name",
+            "form.namePlaceholder": "Jane Doe",
+            "form.phoneLabel": "Phone",
+            "form.phonePlaceholder": "+82-10-0000-0000",
+            "form.emailLabel": "Email",
+            "form.emailPlaceholder": "example@email.com",
+            "form.typeLabel": "Inquiry type",
+            "form.typeOption1": "Incubating inquiry",
+            "form.typeOption2": "MICE/Exhibition inquiry",
+            "form.typeOption3": "Global expansion inquiry",
+            "form.typeOption4": "Other",
+            "form.messageLabel": "Message",
+            "form.messagePlaceholder": "Tell us about your needs in detail.",
+            "form.submit": "Send inquiry",
+
+            "footer.tagline": "Local to Global Gateway.\nA business curator connecting local value to the world",
+            "footer.company": "Company",
+            "footer.ceo": "CEO: Hyeji Kim",
+            "footer.address": "Address: 8F, 20 Gwajeong-ro 41beon-gil, Suyeong-gu, Busan",
+            "footer.registration": "Registration: Tourism & Exhibition Production",
+            "footer.links": "Links",
+            "footer.privacy": "Privacy Policy",
+            "footer.terms": "Terms of Service",
+            "footer.sitemap": "Sitemap",
+            "footer.globalNetwork": "Global Network",
+            "footer.newsletter": "Newsletter",
+            "footer.newsletterBody": "Get the latest business trends and updates.",
+            "footer.newsletterPlaceholder": "Email",
+          },
+
+          ja: {
+            "meta.title": "BEDOOR - Local to Global Gateway",
+            "nav.languageLabel": "言語を選択",
+            "lang.ko": "韓国語",
+            "lang.en": "英語",
+            "lang.ja": "日本語",
+            "lang.zh": "中国語",
+
+            "hero.badge": "グローバル・ビジネス・キュレーター",
+            "hero.headlineTop": "Local to Global,",
+            "hero.headlineBottom": "ローカルからグローバルへ飛躍",
+            "hero.subcopy":
+              "単なるイベントを超え、新しいビジネス価値を創出します。地域の可能性を掘り起こし、世界の中心へつなげます。",
+            "hero.pill1Title": "Incubating",
+            "hero.pill1Desc": "スタートアップ成長",
+            "hero.pill2Desc": "プレミアムイベント",
+            "hero.pill3Title": "Global Support",
+            "hero.pill3Desc": "グローバルネットワーク",
+
+            "about.statLabel": "グローバルプロジェクト完了",
+            "about.kicker": "Vision & Trust",
+            "about.headline": "持続可能なビジネス生態系を築く\nあなたのグローバルパートナー",
+            "about.body":
+              "BEDOORは国境を越える「つながり」の力を信じています。釜山から世界へ、次世代リーダーを育成し、質の高いビジネスプラットフォームを提供してきました。",
+            "about.feature1Title": "女性・若者オーナー",
+            "about.feature1Body": "女性および若者企業として、創造的で柔軟な視点でビジネスを牽引します。",
+            "about.feature2Title": "制作認証",
+            "about.feature2Body": "展示企画と写真撮影の制作確認を完了し、専門性を保証します。",
+            "about.feature3Title": "観光事業登録",
+            "about.feature3Body": "正式なライセンスを保有する信頼できる機関です。",
+            "about.feature4Title": "官公庁・公共パートナー",
+            "about.feature4Body": "政府機関・公共機関との連携によりプロジェクトの信頼度を高めます。",
+
+            "services.kicker": "Core Competencies",
+            "services.headline": "ビジネス価値を現実にする専門サービス",
+            "services.incubating.title": "Incubating",
+            "services.incubating.body":
+              "ローカルクリエイターやスタートアップが自走して成長できるよう、メンタリング・教育・インフラを支援します。",
+            "services.incubating.b1": "BM高度化コンサルティング",
+            "services.incubating.b2": "資金調達・IR支援",
+            "services.incubating.b3": "起業教育プログラム",
+            "services.mice.title": "Premium MICE",
+            "services.mice.body":
+              "大規模カンファレンスから専門展示会まで、創造的な企画と完璧な運営で最高のネットワーキングを提供します。",
+            "services.mice.b1": "国際会議の企画・運営",
+            "services.mice.b2": "ビジネスマッチングフォーラム",
+            "services.mice.b3": "ハイブリッドイベントソリューション",
+            "services.global.title": "Global Networking",
+            "services.global.body":
+              "世界各地の海外拠点ネットワークを活用し、海外進出とパートナーシップ構築を支援します。",
+            "services.global.b1": "海外進出戦略",
+            "services.global.b2": "海外バイヤーマッチング",
+            "services.global.b3": "グローバル能力強化教育",
+
+            "portfolio.kicker": "Our Portfolio",
+            "portfolio.headline": "数値と成果で証明する\nBEDOORの専門性",
+            "portfolio.p1.title": "金井山（クムジョン）青年ローカルクリエイター",
+            "portfolio.p1.body": "地域資源を活用した若手起業家の育成とビジネスモデリング支援",
+            "portfolio.p2.body": "釜山の中核グローバル金融カンファレンスの企画・総括運営",
+            "portfolio.p3.body": "ベトナム進出のための現地ネットワーク連携とビジネスマッチング",
+
+            "contact.kicker": "Contact Us",
+            "contact.headline": "グローバルビジネスの新章を\n共に切り拓きます。",
+            "contact.body": "プロジェクト相談、パートナーシップ提案など、お気軽にご連絡ください。",
+            "contact.addressLabel": "Address",
+            "contact.addressValue": "釜山広域市 水営区 過程路41番街20 8階",
+            "contact.emailLabel": "Email",
+            "contact.phoneLabel": "Phone",
+
+            "form.nameLabel": "お名前",
+            "form.namePlaceholder": "山田 太郎",
+            "form.phoneLabel": "連絡先",
+            "form.phonePlaceholder": "090-0000-0000",
+            "form.emailLabel": "メールアドレス",
+            "form.emailPlaceholder": "example@email.com",
+            "form.typeLabel": "お問い合わせ種別",
+            "form.typeOption1": "インキュベーション",
+            "form.typeOption2": "MICE/展示",
+            "form.typeOption3": "海外進出",
+            "form.typeOption4": "その他",
+            "form.messageLabel": "お問い合わせ内容",
+            "form.messagePlaceholder": "内容をできるだけ詳しくご記入ください。",
+            "form.submit": "送信する",
+
+            "footer.tagline": "Local to Global Gateway.\n地域の価値を世界へつなぐビジネスキュレーター",
+            "footer.company": "Company",
+            "footer.ceo": "CEO: キム・ヘジ",
+            "footer.address": "Address: 釜山広域市 水営区 過程路41番街20 8階",
+            "footer.registration": "Registration: Tourism & Exhibition Production",
+            "footer.links": "Links",
+            "footer.privacy": "Privacy Policy",
+            "footer.terms": "Terms of Service",
+            "footer.sitemap": "Sitemap",
+            "footer.globalNetwork": "Global Network",
+            "footer.newsletter": "Newsletter",
+            "footer.newsletterBody": "最新のビジネストレンドとニュースをお届けします。",
+            "footer.newsletterPlaceholder": "Email",
+          },
+
+          zh: {
+            "meta.title": "BEDOOR - Local to Global Gateway",
+            "nav.languageLabel": "选择语言",
+            "lang.ko": "韩语",
+            "lang.en": "英语",
+            "lang.ja": "日语",
+            "lang.zh": "中文",
+
+            "hero.badge": "全球商业策展人",
+            "hero.headlineTop": "Local to Global,",
+            "hero.headlineBottom": "从本地出发，走向全球",
+            "hero.subcopy": "我们不止于活动，更创造全新的商业价值。挖掘地方潜力，连接到全球舞台的中心。",
+            "hero.pill1Title": "Incubating",
+            "hero.pill1Desc": "初创成长",
+            "hero.pill2Desc": "高端活动",
+            "hero.pill3Title": "Global Support",
+            "hero.pill3Desc": "全球网络",
+
+            "about.statLabel": "已完成的全球项目",
+            "about.kicker": "Vision & Trust",
+            "about.headline": "构建可持续商业生态的\n全球合作伙伴",
+            "about.body":
+              "BEDOOR相信跨越边界的连接力量。从釜山到全球舞台，我们通过培养新一代领袖与提供高质量商业平台，持续证明创新的价值。",
+            "about.feature1Title": "女性与青年企业",
+            "about.feature1Body": "作为女性与青年企业，我们以更具创意与敏捷的视角引领商业。",
+            "about.feature2Title": "制作认证",
+            "about.feature2Body": "完成展览策划与摄影制作确认，确保专业技术能力。",
+            "about.feature3Title": "旅游资质登记",
+            "about.feature3Body": "持有正式旅游业务资质，值得信赖。",
+            "about.feature4Title": "公共部门伙伴",
+            "about.feature4Body": "与政府部门及公共机构紧密合作，提升项目可信度。",
+
+            "services.kicker": "Core Competencies",
+            "services.headline": "将商业价值落地的专业服务",
+            "services.incubating.title": "Incubating",
+            "services.incubating.body": "为本地创作者与初创企业提供导师辅导、教育与基础设施支持，帮助其自我造血并成长。",
+            "services.incubating.b1": "商业模式升级咨询",
+            "services.incubating.b2": "融资与路演支持",
+            "services.incubating.b3": "创业教育项目",
+            "services.mice.title": "Premium MICE",
+            "services.mice.body": "从大型会议到专业展览，以创意策划与精细运营提供卓越商业社交体验。",
+            "services.mice.b1": "国际会议策划与运营",
+            "services.mice.b2": "商务对接论坛",
+            "services.mice.b3": "混合活动解决方案",
+            "services.global.title": "Global Networking",
+            "services.global.body": "依托全球海外据点网络，助力本地企业出海与建立全球合作。",
+            "services.global.b1": "海外市场进入战略",
+            "services.global.b2": "海外买家对接",
+            "services.global.b3": "全球能力提升培训",
+
+            "portfolio.kicker": "Our Portfolio",
+            "portfolio.headline": "以数据与成果\n证明BEDOOR的专业性",
+            "portfolio.p1.title": "金井青年本地创作者",
+            "portfolio.p1.body": "利用地方资源培育青年创业者，并支持商业建模",
+            "portfolio.p2.body": "策划并统筹运营釜山核心全球金融大会",
+            "portfolio.p3.body": "连接越南本地网络并进行商务对接，支持市场进入",
+
+            "contact.kicker": "Contact Us",
+            "contact.headline": "携手开启\n全球商业新篇章",
+            "contact.body": "项目咨询、合作提案等，如需BEDOOR支持，欢迎随时联系。",
+            "contact.addressLabel": "Address",
+            "contact.addressValue": "釜山广域市 水营区 过程路41番街20号 8层",
+            "contact.emailLabel": "Email",
+            "contact.phoneLabel": "Phone",
+
+            "form.nameLabel": "姓名",
+            "form.namePlaceholder": "张三",
+            "form.phoneLabel": "联系方式",
+            "form.phonePlaceholder": "010-0000-0000",
+            "form.emailLabel": "邮箱地址",
+            "form.emailPlaceholder": "example@email.com",
+            "form.typeLabel": "咨询类型",
+            "form.typeOption1": "孵化咨询",
+            "form.typeOption2": "MICE/展览咨询",
+            "form.typeOption3": "出海咨询",
+            "form.typeOption4": "其他",
+            "form.messageLabel": "咨询内容",
+            "form.messagePlaceholder": "请尽量详细描述您的需求。",
+            "form.submit": "发送咨询",
+
+            "footer.tagline": "Local to Global Gateway.\n连接本地价值与世界的商业策展人",
+            "footer.company": "Company",
+            "footer.ceo": "CEO: 金惠智",
+            "footer.address": "Address: 釜山广域市 水营区 过程路41番街20号 8层",
+            "footer.registration": "Registration: Tourism & Exhibition Production",
+            "footer.links": "Links",
+            "footer.privacy": "Privacy Policy",
+            "footer.terms": "Terms of Service",
+            "footer.sitemap": "Sitemap",
+            "footer.globalNetwork": "Global Network",
+            "footer.newsletter": "Newsletter",
+            "footer.newsletterBody": "订阅最新商业趋势与动态。",
+            "footer.newsletterPlaceholder": "Email",
+          },
+        };
+
+        function safeLang(lang) {
+          return SUPPORTED.includes(lang) ? lang : "ko";
+        }
+
+        function t(lang, key) {
+          const dict = translations[lang] || translations.ko;
+          if (Object.prototype.hasOwnProperty.call(dict, key)) return dict[key];
+          if (Object.prototype.hasOwnProperty.call(translations.ko, key)) return translations.ko[key];
+          return null;
+        }
+
+        function setWithLineBreaks(el, text) {
+          const parts = String(text).split("\n");
+          el.replaceChildren();
+          parts.forEach((part, idx) => {
+            if (idx > 0) el.appendChild(document.createElement("br"));
+            el.appendChild(document.createTextNode(part));
+          });
+        }
+
+        function applyTranslations(lang) {
+          const html = document.documentElement;
+          html.lang = lang;
+
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            const val = t(lang, key);
+            if (val == null) return;
+            el.textContent = val;
+          });
+
+          document.querySelectorAll("[data-i18n-br]").forEach((el) => {
+            const key = el.getAttribute("data-i18n-br");
+            const val = t(lang, key);
+            if (val == null) return;
+            setWithLineBreaks(el, val);
+          });
+
+          document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+            const key = el.getAttribute("data-i18n-placeholder");
+            const val = t(lang, key);
+            if (val == null) return;
+            el.setAttribute("placeholder", val);
+          });
+
+          const titleEl = document.querySelector("title[data-i18n='meta.title']");
+          if (titleEl) {
+            const val = t(lang, "meta.title");
+            if (val != null) titleEl.textContent = val;
+          }
+        }
+
+        const select = document.getElementById("lang-select");
+        const initial = safeLang(localStorage.getItem(STORAGE_KEY) || document.documentElement.lang || "ko");
+        if (select) select.value = initial;
+        applyTranslations(initial);
+
+        if (select) {
+          select.addEventListener("change", (e) => {
+            const next = safeLang(e.target.value);
+            localStorage.setItem(STORAGE_KEY, next);
+            applyTranslations(next);
+          });
+        }
+      })();
+    </script>
+</body></html>
