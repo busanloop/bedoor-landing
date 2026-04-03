@@ -358,7 +358,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-xs font-bold text-primary uppercase" data-i18n="form.phoneLabel">연락처</label>
-<input name="phone" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.phonePlaceholder" placeholder="010-0000-0000" type="tel"/>
+<input name="phone" required pattern="[\d\-\+\s]{7,20}" title="Please enter a valid phone number" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.phonePlaceholder" placeholder="010-0000-0000" type="tel"/>
 </div>
 </div>
 <div class="space-y-2">
