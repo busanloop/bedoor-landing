@@ -346,24 +346,28 @@
 </div>
 </div>
 <div class="bg-surface-container-lowest p-10 rounded-2xl shadow-xl shadow-primary/5 border border-outline-variant/10">
-<form class="space-y-6">
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"/>
+<input type="hidden" name="subject" value="BeDoor Website Inquiry"/>
+<input type="hidden" name="from_name" value="BeDoor Website"/>
+<input type="hidden" name="redirect" value="https://web3forms.com/success"/>
 <div class="grid grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="text-xs font-bold text-primary uppercase" data-i18n="form.nameLabel">성함</label>
-<input class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.namePlaceholder" placeholder="홍길동" type="text"/>
+<input name="name" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.namePlaceholder" placeholder="홍길동" type="text"/>
 </div>
 <div class="space-y-2">
 <label class="text-xs font-bold text-primary uppercase" data-i18n="form.phoneLabel">연락처</label>
-<input class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.phonePlaceholder" placeholder="010-0000-0000" type="tel"/>
+<input name="phone" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.phonePlaceholder" placeholder="010-0000-0000" type="tel"/>
 </div>
 </div>
 <div class="space-y-2">
 <label class="text-xs font-bold text-primary uppercase" data-i18n="form.emailLabel">이메일 주소</label>
-<input class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.emailPlaceholder" placeholder="example@email.com" type="email"/>
+<input name="email" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.emailPlaceholder" placeholder="example@email.com" type="email"/>
 </div>
 <div class="space-y-2">
 <label class="text-xs font-bold text-primary uppercase" data-i18n="form.typeLabel">문의 유형</label>
-<select class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 text-on-surface-variant">
+<select name="inquiry_type" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 text-on-surface-variant">
 <option data-i18n="form.typeOption1">파트너십</option>
 <option data-i18n="form.typeOption2">공간 협업</option>
 <option data-i18n="form.typeOption3">프로젝트</option>
@@ -373,7 +377,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-xs font-bold text-primary uppercase" data-i18n="form.messageLabel">문의 내용</label>
-<textarea class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.messagePlaceholder" placeholder="문의하실 내용을 상세히 적어주세요." rows="4"></textarea>
+<textarea name="message" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.messagePlaceholder" placeholder="문의하실 내용을 상세히 적어주세요." rows="4"></textarea>
 </div>
 <button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:bg-secondary transition-all shadow-lg shadow-primary/20" type="submit" data-i18n="form.submit">문의 보내기</button>
 </form>
@@ -383,7 +387,7 @@
 </section>
 <!-- Footer -->
 <footer class="bg-[#002046] dark:bg-slate-950 full-width relative border-t-0">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto text-white">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 py-16 max-w-7xl mx-auto text-white">
 <div class="md:col-span-1 space-y-6">
 <img alt="BEDOOR Logo" class="h-8 w-auto object-contain invert brightness-0" src="assets/images/bedoor-logo.png"/>
 <p class="font-['Inter'] text-sm leading-relaxed text-slate-300" data-i18n-br="footer.tagline">
@@ -406,16 +410,6 @@
 <li><a class="text-slate-300 hover:text-white transition-all" href="#" data-i18n="footer.terms">Terms of Service</a></li>
 <li><a class="text-slate-300 hover:text-white transition-all" href="#" data-i18n="footer.sitemap">Sitemap</a></li>
 </ul>
-</div>
-<div class="space-y-6">
-<h5 class="text-sm font-bold text-secondary-fixed uppercase tracking-widest" data-i18n="footer.newsletter">Newsletter</h5>
-<p class="text-xs text-slate-400" data-i18n="footer.newsletterBody">Stay updated on our latest projects and community news.</p>
-<div class="flex">
-<input class="bg-white/10 border-0 text-white rounded-l-lg px-4 py-2 w-full text-sm" data-i18n-placeholder="footer.newsletterPlaceholder" placeholder="Email" type="email"/>
-<button class="bg-secondary px-4 py-2 rounded-r-lg">
-<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
-</button>
-</div>
 </div>
 </div>
 <div class="border-t border-white/5 py-8 max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -533,9 +527,6 @@
             "footer.privacy": "Privacy Policy",
             "footer.terms": "Terms of Service",
             "footer.sitemap": "Sitemap",
-            "footer.newsletter": "Newsletter",
-            "footer.newsletterBody": "최신 프로젝트 소식과 커뮤니티 뉴스를 받아보세요.",
-            "footer.newsletterPlaceholder": "Email",
           },
 
           en: {
@@ -639,9 +630,6 @@
             "footer.privacy": "Privacy Policy",
             "footer.terms": "Terms of Service",
             "footer.sitemap": "Sitemap",
-            "footer.newsletter": "Newsletter",
-            "footer.newsletterBody": "Stay updated on our latest projects and community news.",
-            "footer.newsletterPlaceholder": "Email",
           },
 
           ja: {
@@ -745,9 +733,6 @@
             "footer.privacy": "Privacy Policy",
             "footer.terms": "Terms of Service",
             "footer.sitemap": "Sitemap",
-            "footer.newsletter": "Newsletter",
-            "footer.newsletterBody": "最新プロジェクトとコミュニティニュースをお届けします。",
-            "footer.newsletterPlaceholder": "Email",
           },
 
           zh: {
@@ -847,9 +832,6 @@
             "footer.privacy": "Privacy Policy",
             "footer.terms": "Terms of Service",
             "footer.sitemap": "Sitemap",
-            "footer.newsletter": "Newsletter",
-            "footer.newsletterBody": "获取最新项目和社区动态。",
-            "footer.newsletterPlaceholder": "Email",
           },
         };
 
