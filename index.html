@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="ko"><head>
+<html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="meta.title">BEDOOR - Building innovation-driven spaces in Korea</title>
-<meta property="og:title" content="BEDOOR - Building innovation-driven spaces in Korea"/>
-<meta property="og:description" content="Korea-based commercial real estate and hospitality developer creating spaces where business, entrepreneurship, and community can thrive."/>
+<title data-i18n="meta.title">BEDOOR - Your local partner in Busan</title>
+<meta property="og:title" content="BEDOOR - Your local partner in Busan"/>
+<meta property="og:description" content="BeDoor is a local operator and community builder based in Busan. We run spaces, build community, and welcome global visitors to the city."/>
 <meta property="og:image" content="https://be-door.com/assets/images/bedoor-hero-bg-bifc.jpg"/>
 <meta property="og:url" content="https://be-door.com"/>
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="BEDOOR - Building innovation-driven spaces in Korea"/>
-<meta name="twitter:description" content="Korea-based commercial real estate and hospitality developer creating spaces where business, entrepreneurship, and community can thrive."/>
+<meta name="twitter:title" content="BEDOOR - Your local partner in Busan"/>
+<meta name="twitter:description" content="BeDoor is a local operator and community builder based in Busan. We run spaces, build community, and welcome global visitors to the city."/>
 <meta name="twitter:image" content="https://be-door.com/assets/images/bedoor-hero-bg-bifc.jpg"/>
-<meta name="description" content="Korea-based commercial real estate and hospitality developer creating spaces where business, entrepreneurship, and community can thrive."/>
+<meta name="description" content="BeDoor is a local operator and community builder based in Busan. We run spaces, build community, and welcome global visitors to the city. Currently operating the BIFC2 22F Lounge."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -91,7 +91,7 @@
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface">
-<!-- 1. Header: TopNavBar -->
+<!-- 1. Header -->
 <nav class="bg-[#f4fafe]/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_12px_40px_rgba(0,32,70,0.06)] dark:shadow-none">
 <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
 <div class="flex items-center">
@@ -99,13 +99,13 @@
 </div>
 <div class="hidden md:flex items-center gap-8 text-sm font-medium text-on-surface-variant">
 <a href="#about" class="hover:text-primary transition-colors" data-i18n="nav.about">About</a>
-<a href="#services" class="hover:text-primary transition-colors" data-i18n="nav.services">Services</a>
-<a href="#track-record" class="hover:text-primary transition-colors" data-i18n="nav.projects">Projects</a>
+<a href="#services" class="hover:text-primary transition-colors" data-i18n="nav.services">What We Do</a>
+<a href="#our-work" class="hover:text-primary transition-colors" data-i18n="nav.work">Our Work</a>
 <a href="#contact" class="hover:text-primary transition-colors" data-i18n="nav.contact">Contact</a>
 </div>
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-on-surface-variant" aria-hidden="true" data-icon="language">language</span>
-<label class="sr-only" for="lang-select" data-i18n="nav.languageLabel">언어 선택</label>
+<label class="sr-only" for="lang-select" data-i18n="nav.languageLabel">Select language</label>
 <select id="lang-select" class="w-24 bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-3 py-2 text-sm text-on-surface-variant focus:ring-2 focus:ring-secondary/50 focus:border-transparent">
 <option value="en">English</option>
 <option value="ja">日本語</option>
@@ -113,221 +113,168 @@
 </div>
 </div>
 </nav>
-<!-- 2. Hero Section -->
+<!-- 2. Hero -->
 <header class="relative min-h-[921px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" alt="BIFC2 towers illuminated at night in Busan financial district" src="assets/images/bedoor-hero-bg-bifc.jpg"/>
+<img class="w-full h-full object-cover" alt="BIFC2 towers at night in Busan" src="assets/images/bedoor-hero-bg-bifc.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
 </div>
 <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid lg:grid-cols-2 gap-12 items-center">
 <div class="space-y-8">
 <div class="inline-flex items-center gap-2 bg-secondary/10 px-4 py-1.5 rounded-full">
 <span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="text-xs font-bold tracking-widest text-secondary uppercase" data-i18n="hero.badge">Korea-Based Place Developer</span>
+<span class="text-xs font-bold tracking-widest text-secondary uppercase" data-i18n="hero.badge">Based in Busan</span>
 </div>
-<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-primary leading-[1.1] tracking-tight">
-<span data-i18n="hero.headlineTop">Building</span> <span class="text-secondary" data-i18n="hero.headlineBottom">Innovation-Driven Spaces in Korea</span>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-primary leading-[1.1] tracking-tight" data-i18n="hero.headline">
+Your local partner in Busan
 </h1>
-<p class="text-on-surface-variant text-lg md:text-xl max-w-lg leading-relaxed font-light" data-i18n="hero.subcopy">
-                    BeDoor is a Korea-based commercial real estate and hospitality developer creating spaces where business, entrepreneurship, and community can thrive.
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed font-light" data-i18n="hero.subcopy">
+                    BeDoor is a local operator and community builder based in Busan. We run spaces, build community, and welcome global visitors to the city. If you're looking to connect with Busan — we're a good place to start.
                 </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined" data-icon="domain">domain</span>
-</div>
-<div>
-<p class="font-bold text-primary" data-i18n="hero.pill1Title">Real Estate Development</p>
-<p class="text-xs text-on-surface-variant" data-i18n="hero.pill1Desc">Commercial Spaces</p>
-</div>
-</div>
-<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined" data-icon="weekend">weekend</span>
-</div>
-<div>
-<p class="font-bold text-primary" data-i18n="hero.pill2Title">Hospitality & Operations</p>
-<p class="text-xs text-on-surface-variant" data-i18n="hero.pill2Desc">Space Management</p>
-</div>
-</div>
-<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
-</div>
-<div>
-<p class="font-bold text-primary" data-i18n="hero.pill3Title">Community & Ecosystem</p>
-<p class="text-xs text-on-surface-variant" data-i18n="hero.pill3Desc">Founder-Friendly</p>
-</div>
-</div>
+<p class="text-secondary font-semibold text-lg" data-i18n="hero.highlight">
+                    We welcome global communities visiting Busan.
+                </p>
+<div class="pt-2">
+<a href="#contact" class="inline-block bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-secondary transition-all shadow-lg shadow-primary/20" data-i18n="hero.cta">Get in Touch</a>
 </div>
 </div>
 </div>
 </header>
-<!-- 3. About Us -->
+<!-- 3. About -->
 <section class="py-24 bg-surface-container-low" id="about">
 <div class="max-w-7xl mx-auto px-8">
 <div class="grid lg:grid-cols-12 gap-16 items-center">
 <div class="lg:col-span-5 relative">
 <div class="rounded-xl overflow-hidden shadow-2xl">
-<img class="w-full aspect-[4/5] object-cover" alt="BIFC towers with green landscape in Busan financial district" src="assets/images/bedoor-about-bifc.jpg"/>
+<img class="w-full aspect-[4/5] object-cover" alt="BIFC towers with green landscape in Busan" src="assets/images/bedoor-about-bifc.jpg"/>
 </div>
 <div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-xl text-white shadow-xl max-w-[280px]">
-<p class="text-lg font-black mb-1 uppercase tracking-wide leading-tight" data-i18n="about.badgeTop">Busan Financial District</p>
-<p class="text-sm font-light opacity-80 uppercase tracking-widest" data-i18n="about.badgeBottom">Innovation Hub</p>
+<p class="text-lg font-black mb-1 uppercase tracking-wide leading-tight" data-i18n="about.badgeTop">BIFC2 22F</p>
+<p class="text-sm font-light opacity-80 uppercase tracking-widest" data-i18n="about.badgeBottom">Lounge & Community</p>
 </div>
 </div>
-<div class="lg:col-span-7 space-y-10">
+<div class="lg:col-span-7 space-y-8">
 <div>
-<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="about.kicker">Place, Trust & Long-Term Vision</h2>
-<h3 class="text-4xl font-headline font-bold text-primary mb-6 leading-tight" data-i18n-br="about.headline">BeDoor develops and operates innovation-driven spaces in Korea.</h3>
-<p class="text-on-surface-variant leading-relaxed" data-i18n="about.body">
-                            Our work connects local potential with global networks through place-based development, hospitality, cross-border collaboration, and community-driven growth.
+<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-6" data-i18n="about.kicker">About BeDoor</h2>
+<div class="space-y-5 text-on-surface-variant leading-relaxed">
+<p data-i18n="about.body1">
+                            BeDoor is a local operator and community builder based in Busan. We operate spaces, grow communities, and help people from around the world connect with the city — through hospitality, local partnerships, and on-the-ground support.
                         </p>
-</div>
-<div class="grid sm:grid-cols-2 gap-6">
-<div class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="apartment">apartment</span>
-<div>
-<h4 class="font-bold text-primary mb-1" data-i18n="about.feature1Title">BIFC2 Innovation Cluster</h4>
-<p class="text-sm text-on-surface-variant" data-i18n="about.feature1Body">Involved in shaping the innovation cluster around BIFC2 in Busan.</p>
-</div>
-</div>
-<div class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="deck">deck</span>
-<div>
-<h4 class="font-bold text-primary mb-1" data-i18n="about.feature2Title">Hospitality-Driven Operations</h4>
-<p class="text-sm text-on-surface-variant" data-i18n="about.feature2Body">Creating welcoming spaces for founders, partners, and visitors.</p>
-</div>
-</div>
-<div class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="flight_takeoff">flight_takeoff</span>
-<div>
-<h4 class="font-bold text-primary mb-1" data-i18n="about.feature3Title">Cross-Border Collaboration</h4>
-<p class="text-sm text-on-surface-variant" data-i18n="about.feature3Body">Connecting Busan with Japan and global networks.</p>
-</div>
-</div>
-<div class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="handshake">handshake</span>
-<div>
-<h4 class="font-bold text-primary mb-1" data-i18n="about.feature4Title">Founder-Friendly Spaces</h4>
-<p class="text-sm text-on-surface-variant" data-i18n="about.feature4Body">Designing environments where entrepreneurship and community can thrive.</p>
-</div>
+<p data-i18n="about.body2">
+                            Right now, we participate in the operation of the BIFC2 22F Lounge, a shared space in Busan's financial district. Looking ahead, we're working toward a network of community lounges at Busan's major gateways — Busan Station, Gimhae Airport, and Busan International Passenger Terminal.
+                        </p>
+<p data-i18n="about.body3">
+                            Since 2015, we've worked in Busan alongside global partners and communities including Techstars, WeWork, Start2Group, InnoEx, Edtech Asia, and TechSauce.
+                        </p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- 4. Our Services -->
+<!-- 4. What We Do -->
 <section class="py-24" id="services">
 <div class="max-w-7xl mx-auto px-8">
 <div class="text-center max-w-3xl mx-auto mb-16">
-<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="services.kicker">What We Build & Operate</h2>
-<h3 class="text-4xl font-headline font-bold text-primary" data-i18n="services.headline">Spaces, hospitality, and ecosystems that create long-term value</h3>
+<h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="services.kicker">What We Do</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="services.intro">We create local entry points for people, partners, and communities coming to Busan.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Commercial Real Estate -->
-<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-outline-variant/10">
+<div class="grid md:grid-cols-2 gap-8">
+<!-- 1. Lounge Operations -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-outline-variant/10">
 <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl" data-icon="domain">domain</span>
+<span class="material-symbols-outlined text-3xl" data-icon="deck">deck</span>
 </div>
-<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.realestate.title">Commercial Real Estate Development</h4>
-<p class="text-on-surface-variant mb-6 leading-relaxed" data-i18n="services.realestate.body">Development and activation of innovation-driven commercial spaces in Korea.</p>
-<ul class="space-y-3 mb-8 text-sm font-medium text-primary">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.realestate.b1">Commercial space activation</span></li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.realestate.b2">Place strategy for emerging districts</span></li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.realestate.b3">Real estate aligned with entrepreneurship</span></li>
-</ul>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.lounge.title">Lounge Operations</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="services.lounge.body">We participate in the operation of the BIFC2 22F Lounge — shaping the day-to-day hospitality, visitor experience, and community engagement on site.</p>
 </div>
-<!-- Hospitality & Space Operations -->
-<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-outline-variant/10">
-<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl" data-icon="hotel">hotel</span>
-</div>
-<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.hospitality.title">Hospitality & Space Operations</h4>
-<p class="text-on-surface-variant mb-6 leading-relaxed" data-i18n="services.hospitality.body">Shared lounge and community-oriented space operations designed to welcome founders, partners, and visitors.</p>
-<ul class="space-y-3 mb-8 text-sm font-medium text-primary">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.hospitality.b1">Shared lounge operations</span></li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.hospitality.b2">Visitor experience design</span></li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.hospitality.b3">Hospitality-driven place activation</span></li>
-</ul>
-</div>
-<!-- Community & Ecosystem Building -->
-<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-outline-variant/10">
+<!-- 2. Community Building -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-outline-variant/10">
 <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-3xl" data-icon="diversity_3">diversity_3</span>
 </div>
-<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.community.title">Community & Ecosystem Building</h4>
-<p class="text-on-surface-variant mb-6 leading-relaxed" data-i18n="services.community.body">Cross-border collaboration and founder-friendly environments that support long-term community growth.</p>
-<ul class="space-y-3 mb-8 text-sm font-medium text-primary">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.community.b1">Founder and partner engagement</span></li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.community.b2">Ecosystem partnerships</span></li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> <span data-i18n="services.community.b3">Community-driven growth initiatives</span></li>
-</ul>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.community.title">Community Building</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="services.community.body">We build relationships, run programs, and grow local connections that help people and organizations engage with Busan meaningfully.</p>
+</div>
+<!-- 3. Global Community Hosting -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="flight_land">flight_land</span>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.hosting.title">Global Community Hosting</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="services.hosting.body">When global communities visit Busan, we help them land — with spaces, introductions, and the local knowledge to make real connections happen.</p>
+</div>
+<!-- 4. Gateway Lounge Network -->
+<div class="group bg-surface-container-lowest rounded-xl p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="hub">hub</span>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-4" data-i18n="services.gateway.title">Gateway Lounge Network</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="services.gateway.body">Starting from the BIFC2 22F Lounge, we are building toward a broader lounge network across Busan's key arrival points — a long-term vision for how the city welcomes the world.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- 5. Track Record (Portfolio) -->
-<section class="py-24 bg-primary text-white overflow-hidden" id="track-record">
+<!-- 5. Our Work -->
+<section class="py-24 bg-primary text-white overflow-hidden" id="our-work">
 <div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-2xl">
-<h2 class="text-secondary-fixed font-bold tracking-widest uppercase text-sm mb-4" data-i18n="portfolio.kicker">Our Projects</h2>
-<h3 class="text-4xl font-headline font-bold" data-i18n-br="portfolio.headline">Spaces and ecosystems we are building in Busan</h3>
-</div>
-<div class="flex gap-4">
-<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
-</button>
-<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
+<div class="mb-16">
+<h2 class="text-secondary-fixed font-bold tracking-widest uppercase text-sm mb-4" data-i18n="work.kicker">Our Work</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Project 1: Busan Fintech Innovation Cluster -->
+<!-- Card 1: BIFC2 22F Lounge -->
 <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Busan Fintech Hub exhibition space with startup booths" src="assets/images/bedoor-portfolio-fintech.jpg"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="BIFC2 22F Lounge in Busan" src="assets/images/bedoor-portfolio-fintech.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-90"></div>
 <div class="absolute bottom-0 left-0 p-8 w-full">
-<span class="text-secondary-fixed text-xs font-bold tracking-wider uppercase mb-2 block" data-i18n="portfolio.p1.category">Innovation District</span>
-<h4 class="text-xl font-bold mb-2" data-i18n="portfolio.p1.title">Busan Fintech Innovation Cluster</h4>
-<p class="text-sm text-white/70" data-i18n="portfolio.p1.body">Shaping the innovation district around BIFC2 through place-based development, ecosystem activation, and founder-friendly space strategy.</p>
+<h4 class="text-xl font-bold mb-2" data-i18n="work.p1.title">BIFC2 22F Lounge</h4>
+<p class="text-sm text-white/70" data-i18n="work.p1.body">BeDoor currently participates in the operation of the BIFC2 22F Lounge — a shared space in Busan's financial district for community, collaboration, and hospitality.</p>
 </div>
 </div>
-<!-- Project 2: Cross-Border Ecosystem Building -->
+<!-- Card 2: Global Community Connections -->
 <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cross-border partnership team at DO Ventures in Vietnam" src="assets/images/bedoor-portfolio-crossborder.jpg"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cross-border community event" src="assets/images/bedoor-portfolio-crossborder.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-90"></div>
 <div class="absolute bottom-0 left-0 p-8 w-full">
-<span class="text-secondary-fixed text-xs font-bold tracking-wider uppercase mb-2 block" data-i18n="portfolio.p2.category">Global Collaboration</span>
-<h4 class="text-xl font-bold mb-2" data-i18n="portfolio.p2.title">Cross-Border Ecosystem Building</h4>
-<p class="text-sm text-white/70" data-i18n="portfolio.p2.body">Building founder-friendly networks that connect Busan with Japan, Vietnam, and global partners through cross-border collaboration.</p>
+<h4 class="text-xl font-bold mb-2" data-i18n="work.p2.title">Global Community Connections</h4>
+<p class="text-sm text-white/70" data-i18n="work.p2.body">Over the past decade in Busan, BeDoor has worked alongside global communities including Techstars, WeWork, Start2Group, InnoEx, Edtech Asia, and TechSauce.</p>
 </div>
 </div>
-<!-- Project 3: Local Creator & Community Development -->
+<!-- Card 3: Future Lounge Network -->
 <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Local creator community event with audience and presenter" src="assets/images/bedoor-portfolio-community.jpg"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Community gathering" src="assets/images/bedoor-portfolio-community.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-90"></div>
 <div class="absolute bottom-0 left-0 p-8 w-full">
-<span class="text-secondary-fixed text-xs font-bold tracking-wider uppercase mb-2 block" data-i18n="portfolio.p3.category">Local Ecosystem</span>
-<h4 class="text-xl font-bold mb-2" data-i18n="portfolio.p3.title">Local Creator & Community Development</h4>
-<p class="text-sm text-white/70" data-i18n="portfolio.p3.body">Supporting local creators and community-based entrepreneurship through ecosystem programs, networking, and place-based growth.</p>
+<h4 class="text-xl font-bold mb-2" data-i18n="work.p3.title">Future Lounge Network</h4>
+<p class="text-sm text-white/70" data-i18n="work.p3.body">Looking ahead, BeDoor is working toward a lounge network across Busan's major gateways — Busan Station, Gimhae Airport, and Busan International Passenger Terminal.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- 6. Contact Us / Lead Form -->
+<!-- 6. Open to Global Communities -->
+<section class="py-24 bg-surface-container-low" id="community">
+<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-3xl mx-auto text-center space-y-8">
+<h2 class="text-secondary font-bold tracking-widest uppercase text-sm" data-i18n="community.kicker">Open to Global Communities</h2>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed" data-i18n="community.body">
+                    If you're bringing a community to Busan — or looking for a local partner in the city — BeDoor can help. We provide spaces, local connections, and the hospitality to make your time here count.
+                </p>
+<p class="text-on-surface-variant text-base leading-relaxed italic" data-i18n="community.alt">
+                    For global communities and partners visiting Busan, BeDoor is a local entry point — connecting you with the city through spaces, people, and hands-on support.
+                </p>
+</div>
+</div>
+</section>
+<!-- 7. Contact -->
 <section class="py-24" id="contact">
 <div class="max-w-7xl mx-auto px-8">
 <div class="grid lg:grid-cols-2 gap-20">
 <div class="space-y-12">
 <div>
 <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4" data-i18n="contact.kicker">Get in Touch</h2>
-<h3 class="text-4xl font-headline font-bold text-primary mb-6" data-i18n-br="contact.headline">Let's build spaces and partnerships in Busan.</h3>
-<p class="text-on-surface-variant" data-i18n="contact.body">For partnership inquiries, space collaborations, community initiatives, and project discussions, feel free to reach out.</p>
+<h3 class="text-4xl font-headline font-bold text-primary mb-6" data-i18n="contact.headline">Looking for a local partner in Busan?</h3>
+<p class="text-on-surface-variant" data-i18n="contact.body">BeDoor works with communities, partners, and organizations looking to connect with Busan. Whether it's a visit, a collaboration, or a longer-term partnership — we'd like to hear from you.</p>
 </div>
 <div class="space-y-6">
 <div class="flex gap-6 items-center">
@@ -336,7 +283,7 @@
 </div>
 <div>
 <p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider" data-i18n="contact.addressLabel">Address</p>
-<p class="font-medium" data-i18n="contact.addressValue">부산 남구 남동천로 128, BIFC2, 23층 2320호</p>
+<p class="font-medium" data-i18n="contact.addressValue">23F, BIFC2, 128 Namdongcheon-ro, Nam-gu, Busan</p>
 </div>
 </div>
 <div class="flex gap-6 items-center">
@@ -367,33 +314,33 @@
 <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
 <div class="grid grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-xs font-bold text-primary uppercase" data-i18n="form.nameLabel">성함</label>
-<input name="name" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.namePlaceholder" placeholder="홍길동" type="text"/>
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.nameLabel">Name</label>
+<input name="name" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.namePlaceholder" placeholder="Jane Doe" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold text-primary uppercase" data-i18n="form.phoneLabel">연락처</label>
-<input name="phone" required pattern="[\d\-\+\s]{7,20}" title="Please enter a valid phone number" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.phonePlaceholder" placeholder="010-0000-0000" type="tel"/>
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.orgLabel">Organization</label>
+<input name="organization" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.orgPlaceholder" placeholder="Company or community name" type="text"/>
 </div>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold text-primary uppercase" data-i18n="form.emailLabel">이메일 주소</label>
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.emailLabel">Email</label>
 <input name="email" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.emailPlaceholder" placeholder="example@email.com" type="email"/>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold text-primary uppercase" data-i18n="form.typeLabel">문의 유형</label>
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.typeLabel">Inquiry type</label>
 <select name="inquiry_type" class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 text-on-surface-variant">
-<option data-i18n="form.typeOption1">파트너십</option>
-<option data-i18n="form.typeOption2">공간 협업</option>
-<option data-i18n="form.typeOption3">프로젝트</option>
-<option data-i18n="form.typeOption4">커뮤니티 / 생태계</option>
-<option data-i18n="form.typeOption5">기타</option>
+<option data-i18n="form.typeOption1">Partnership</option>
+<option data-i18n="form.typeOption2">Community Visit</option>
+<option data-i18n="form.typeOption3">Collaboration</option>
+<option data-i18n="form.typeOption4">Event & Program</option>
+<option data-i18n="form.typeOption5">General</option>
 </select>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold text-primary uppercase" data-i18n="form.messageLabel">문의 내용</label>
-<textarea name="message" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.messagePlaceholder" placeholder="문의하실 내용을 상세히 적어주세요." rows="4"></textarea>
+<label class="text-xs font-bold text-primary uppercase" data-i18n="form.messageLabel">Message</label>
+<textarea name="message" required class="w-full bg-surface border-0 rounded-lg p-4 focus:ring-2 focus:ring-secondary/50 placeholder:text-on-surface-variant/40" data-i18n-placeholder="form.messagePlaceholder" placeholder="Tell us how we can work together." rows="4"></textarea>
 </div>
-<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:bg-secondary transition-all shadow-lg shadow-primary/20" type="submit" data-i18n="form.submit">문의 보내기</button>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:bg-secondary transition-all shadow-lg shadow-primary/20" type="submit" data-i18n="form.submit">Contact Us</button>
 </form>
 </div>
 </div>
@@ -405,16 +352,14 @@
 <div class="space-y-6">
 <img alt="BEDOOR Logo" class="h-8 w-auto object-contain invert brightness-0" src="assets/images/bedoor-logo.png"/>
 <p class="font-['Inter'] text-sm leading-relaxed text-slate-300 max-w-sm" data-i18n-br="footer.tagline">
-                    Building innovation-driven spaces in Korea.<br/>
-                    Commercial real estate & hospitality developer.
+                    Busan-based local operator and community builder.<br/>
+                    Welcoming global communities to Busan.
                 </p>
 </div>
 <div class="space-y-6 md:text-right">
 <h5 class="text-sm font-bold text-secondary-fixed uppercase tracking-widest" data-i18n="footer.company">Company</h5>
 <ul class="space-y-4 font-['Inter'] text-sm">
-<li data-i18n="footer.ceo">CEO: 김혜지</li>
-<li data-i18n="footer.address">Address: 부산 남구 남동천로 128, BIFC2, 23층 2320호</li>
-<li data-i18n="footer.registration">Registration: Commercial Real Estate & Hospitality</li>
+<li data-i18n="footer.ceo">CEO: Hyeji Kim</li>
 </ul>
 </div>
 </div>
@@ -428,446 +373,188 @@
 <script>
       (function () {
         const STORAGE_KEY = "bedoor.lang";
-        const SUPPORTED = ["ko", "en", "ja", "zh"];
+        const SUPPORTED = ["en", "ja"];
 
         const translations = {
-          ko: {
-            "meta.title": "BEDOOR - Building innovation-driven spaces in Korea",
-            "nav.languageLabel": "언어 선택",
-            "lang.ko": "한국어",
-            "lang.en": "English",
-            "lang.ja": "日本語",
-            "lang.zh": "中文",
-
-            "nav.about": "소개",
-            "nav.services": "서비스",
-            "nav.projects": "프로젝트",
-            "nav.contact": "문의",
-
-            "hero.badge": "한국 기반 플레이스 디벨로퍼",
-            "hero.headlineTop": "만들다,",
-            "hero.headlineBottom": "한국의 혁신 중심 공간",
-            "hero.subcopy":
-              "BeDoor는 한국 기반의 상업용 부동산 및 호스피탈리티 디벨로퍼로, 비즈니스와 창업, 커뮤니티가 함께 성장하는 공간을 만듭니다.",
-            "hero.pill1Title": "부동산 개발",
-            "hero.pill1Desc": "상업 공간",
-            "hero.pill2Title": "호스피탈리티 & 운영",
-            "hero.pill2Desc": "공간 매니지먼트",
-            "hero.pill3Title": "커뮤니티 & 생태계",
-            "hero.pill3Desc": "파운더 친화적",
-
-            "about.badgeTop": "부산 금융 지구",
-            "about.badgeBottom": "이노베이션 허브",
-            "about.kicker": "장소, 신뢰 & 장기 비전",
-            "about.headline": "BeDoor는 한국에서 혁신 중심의\n공간을 개발하고 운영합니다.",
-            "about.body":
-              "장소 기반 개발, 호스피탈리티, 국경을 넘는 협업, 커뮤니티 중심의 성장을 통해 지역의 잠재력을 글로벌 네트워크와 연결합니다.",
-            "about.feature1Title": "BIFC2 이노베이션 클러스터",
-            "about.feature1Body": "부산 BIFC2를 중심으로 혁신 클러스터를 조성하고 있습니다.",
-            "about.feature2Title": "호스피탈리티 중심 운영",
-            "about.feature2Body": "파운더, 파트너, 방문자를 위한 환영하는 공간을 만듭니다.",
-            "about.feature3Title": "크로스보더 협업",
-            "about.feature3Body": "부산과 일본, 글로벌 네트워크를 연결합니다.",
-            "about.feature4Title": "파운더 친화적 공간",
-            "about.feature4Body": "창업과 커뮤니티가 함께 성장하는 환경을 설계합니다.",
-
-            "services.kicker": "우리가 만들고 운영하는 것",
-            "services.headline": "장기적 가치를 만드는 공간, 호스피탈리티, 생태계",
-            "services.realestate.title": "상업용 부동산 개발",
-            "services.realestate.body":
-              "한국에서 혁신 중심의 상업 공간을 개발하고 활성화합니다.",
-            "services.realestate.b1": "상업 공간 활성화",
-            "services.realestate.b2": "신흥 지구 장소 전략",
-            "services.realestate.b3": "창업 친화적 부동산 프로젝트",
-            "services.hospitality.title": "호스피탈리티 & 공간 운영",
-            "services.hospitality.body":
-              "파운더, 파트너, 방문자를 환영하는 공유 라운지와 커뮤니티 중심 공간을 운영합니다.",
-            "services.hospitality.b1": "공유 라운지 운영",
-            "services.hospitality.b2": "방문자 경험 설계",
-            "services.hospitality.b3": "호스피탈리티 기반 장소 활성화",
-            "services.community.title": "커뮤니티 & 생태계 구축",
-            "services.community.body":
-              "크로스보더 협업과 파운더 친화적 환경으로 장기적 커뮤니티 성장을 지원합니다.",
-            "services.community.b1": "파운더 및 파트너 참여",
-            "services.community.b2": "생태계 파트너십",
-            "services.community.b3": "커뮤니티 중심 성장 이니셔티브",
-
-            "portfolio.kicker": "우리의 프로젝트",
-            "portfolio.headline": "한국에서 만들어가는\n공간과 생태계",
-            "portfolio.p1.category": "이노베이션 디스트릭트",
-            "portfolio.p1.title": "부산 핀테크 이노베이션 클러스터",
-            "portfolio.p1.body": "장소 기반 개발, 생태계 활성화, 파운더 친화적 공간 전략을 통해 BIFC2 주변 혁신 지구를 조성합니다.",
-            "portfolio.p2.category": "글로벌 협업",
-            "portfolio.p2.title": "크로스보더 생태계 구축",
-            "portfolio.p2.body": "부산과 일본, 베트남, 글로벌 파트너를 연결하는 파운더 친화적 네트워크를 구축합니다.",
-            "portfolio.p3.category": "로컬 생태계",
-            "portfolio.p3.title": "로컬 크리에이터 & 커뮤니티 개발",
-            "portfolio.p3.body": "생태계 프로그램, 네트워킹, 장소 기반 성장을 통해 로컬 크리에이터와 커뮤니티 창업을 지원합니다.",
-
-            "contact.kicker": "연락하기",
-            "contact.headline": "부산에서 공간과 파트너십을\n함께 만들어갑니다.",
-            "contact.body": "파트너십 문의, 공간 협업, 커뮤니티 이니셔티브, 프로젝트 논의 등 언제든 연락주세요.",
-            "contact.addressLabel": "Address",
-            "contact.addressValue": "부산 남구 남동천로 128, BIFC2, 23층 2320호",
-            "contact.emailLabel": "Email",
-            "contact.phoneLabel": "Office",
-
-            "form.nameLabel": "성함",
-            "form.namePlaceholder": "홍길동",
-            "form.phoneLabel": "연락처",
-            "form.phonePlaceholder": "010-0000-0000",
-            "form.emailLabel": "이메일 주소",
-            "form.emailPlaceholder": "example@email.com",
-            "form.typeLabel": "문의 유형",
-            "form.typeOption1": "파트너십",
-            "form.typeOption2": "공간 협업",
-            "form.typeOption3": "프로젝트",
-            "form.typeOption4": "커뮤니티 / 생태계",
-            "form.typeOption5": "기타",
-            "form.messageLabel": "문의 내용",
-            "form.messagePlaceholder": "문의하실 내용을 상세히 적어주세요.",
-            "form.submit": "문의 보내기",
-
-            "footer.tagline": "Building innovation-driven spaces in Korea.\n비즈니스, 커뮤니티, 성장을 위한 상업용 부동산 & 호스피탈리티 디벨로퍼",
-            "footer.company": "Company",
-            "footer.ceo": "CEO: 김혜지",
-            "footer.address": "Address: 부산 남구 남동천로 128, BIFC2, 23층 2320호",
-            "footer.registration": "Registration: 상업용 부동산 & 호스피탈리티",
-            "footer.links": "Links",
-            "footer.privacy": "Privacy Policy",
-            "footer.terms": "Terms of Service",
-            "footer.sitemap": "Sitemap",
-          },
-
           en: {
-            "meta.title": "BEDOOR - Building innovation-driven spaces in Korea",
+            "meta.title": "BEDOOR - Your local partner in Busan",
             "nav.languageLabel": "Select language",
-            "lang.ko": "Korean",
             "lang.en": "English",
             "lang.ja": "Japanese",
-            "lang.zh": "Chinese",
 
             "nav.about": "About",
-            "nav.services": "Services",
-            "nav.projects": "Projects",
+            "nav.services": "What We Do",
+            "nav.work": "Our Work",
             "nav.contact": "Contact",
 
-            "hero.badge": "Korea-Based Place Developer",
-            "hero.headlineTop": "Building",
-            "hero.headlineBottom": "Innovation-Driven Spaces in Korea",
+            "hero.badge": "Based in Busan",
+            "hero.headline": "Your local partner in Busan",
             "hero.subcopy":
-              "BeDoor is a Korea-based commercial real estate and hospitality developer creating spaces where business, entrepreneurship, and community can thrive.",
-            "hero.pill1Title": "Real Estate Development",
-            "hero.pill1Desc": "Commercial Spaces",
-            "hero.pill2Title": "Hospitality & Operations",
-            "hero.pill2Desc": "Space Management",
-            "hero.pill3Title": "Community & Ecosystem",
-            "hero.pill3Desc": "Founder-Friendly",
+              "BeDoor is a local operator and community builder based in Busan. We run spaces, build community, and welcome global visitors to the city. If you're looking to connect with Busan — we're a good place to start.",
+            "hero.highlight": "We welcome global communities visiting Busan.",
+            "hero.cta": "Get in Touch",
 
-            "about.badgeTop": "Busan Financial District",
-            "about.badgeBottom": "Innovation Hub",
-            "about.kicker": "Place, Trust & Long-Term Vision",
-            "about.headline": "BeDoor develops and operates\ninnovation-driven spaces in Korea.",
-            "about.body":
-              "Our work connects local potential with global networks through place-based development, hospitality, cross-border collaboration, and community-driven growth.",
-            "about.feature1Title": "BIFC2 Innovation Cluster",
-            "about.feature1Body": "Involved in shaping the innovation cluster around BIFC2 in Busan.",
-            "about.feature2Title": "Hospitality-Driven Operations",
-            "about.feature2Body": "Creating welcoming spaces for founders, partners, and visitors.",
-            "about.feature3Title": "Cross-Border Collaboration",
-            "about.feature3Body": "Connecting Busan with Japan and global networks.",
-            "about.feature4Title": "Founder-Friendly Spaces",
-            "about.feature4Body": "Designing environments where entrepreneurship and community can thrive.",
+            "about.badgeTop": "BIFC2 22F",
+            "about.badgeBottom": "Lounge & Community",
+            "about.kicker": "About BeDoor",
+            "about.body1":
+              "BeDoor is a local operator and community builder based in Busan. We operate spaces, grow communities, and help people from around the world connect with the city — through hospitality, local partnerships, and on-the-ground support.",
+            "about.body2":
+              "Right now, we participate in the operation of the BIFC2 22F Lounge, a shared space in Busan's financial district. Looking ahead, we're working toward a network of community lounges at Busan's major gateways — Busan Station, Gimhae Airport, and Busan International Passenger Terminal.",
+            "about.body3":
+              "Since 2015, we've worked in Busan alongside global partners and communities including Techstars, WeWork, Start2Group, InnoEx, Edtech Asia, and TechSauce.",
 
-            "services.kicker": "What We Build & Operate",
-            "services.headline": "Spaces, hospitality, and ecosystems that create long-term value",
-            "services.realestate.title": "Commercial Real Estate Development",
-            "services.realestate.body":
-              "Development and activation of innovation-driven commercial spaces in Korea.",
-            "services.realestate.b1": "Commercial space activation",
-            "services.realestate.b2": "Place strategy for emerging districts",
-            "services.realestate.b3": "Real estate aligned with entrepreneurship",
-            "services.hospitality.title": "Hospitality & Space Operations",
-            "services.hospitality.body":
-              "Shared lounge and community-oriented space operations designed to welcome founders, partners, and visitors.",
-            "services.hospitality.b1": "Shared lounge operations",
-            "services.hospitality.b2": "Visitor experience design",
-            "services.hospitality.b3": "Hospitality-driven place activation",
-            "services.community.title": "Community & Ecosystem Building",
+            "services.kicker": "What We Do",
+            "services.intro": "We create local entry points for people, partners, and communities coming to Busan.",
+            "services.lounge.title": "Lounge Operations",
+            "services.lounge.body":
+              "We participate in the operation of the BIFC2 22F Lounge — shaping the day-to-day hospitality, visitor experience, and community engagement on site.",
+            "services.community.title": "Community Building",
             "services.community.body":
-              "Cross-border collaboration and founder-friendly environments that support long-term community growth.",
-            "services.community.b1": "Founder and partner engagement",
-            "services.community.b2": "Ecosystem partnerships",
-            "services.community.b3": "Community-driven growth initiatives",
+              "We build relationships, run programs, and grow local connections that help people and organizations engage with Busan meaningfully.",
+            "services.hosting.title": "Global Community Hosting",
+            "services.hosting.body":
+              "When global communities visit Busan, we help them land — with spaces, introductions, and the local knowledge to make real connections happen.",
+            "services.gateway.title": "Gateway Lounge Network",
+            "services.gateway.body":
+              "Starting from the BIFC2 22F Lounge, we are building toward a broader lounge network across Busan's key arrival points — a long-term vision for how the city welcomes the world.",
 
-            "portfolio.kicker": "Our Projects",
-            "portfolio.headline": "Spaces and ecosystems\nwe are building in Korea",
-            "portfolio.p1.category": "Innovation District",
-            "portfolio.p1.title": "Busan Fintech Innovation Cluster",
-            "portfolio.p1.body": "Shaping the innovation district around BIFC2 through place-based development, ecosystem activation, and founder-friendly space strategy.",
-            "portfolio.p2.category": "Global Collaboration",
-            "portfolio.p2.title": "Cross-Border Ecosystem Building",
-            "portfolio.p2.body": "Building founder-friendly networks that connect Busan with Japan, Vietnam, and global partners through cross-border collaboration.",
-            "portfolio.p3.category": "Local Ecosystem",
-            "portfolio.p3.title": "Local Creator & Community Development",
-            "portfolio.p3.body": "Supporting local creators and community-based entrepreneurship through ecosystem programs, networking, and place-based growth.",
+            "work.kicker": "Our Work",
+            "work.p1.title": "BIFC2 22F Lounge",
+            "work.p1.body": "BeDoor currently participates in the operation of the BIFC2 22F Lounge — a shared space in Busan's financial district for community, collaboration, and hospitality.",
+            "work.p2.title": "Global Community Connections",
+            "work.p2.body": "Over the past decade in Busan, BeDoor has worked alongside global communities including Techstars, WeWork, Start2Group, InnoEx, Edtech Asia, and TechSauce.",
+            "work.p3.title": "Future Lounge Network",
+            "work.p3.body": "Looking ahead, BeDoor is working toward a lounge network across Busan's major gateways — Busan Station, Gimhae Airport, and Busan International Passenger Terminal.",
+
+            "community.kicker": "Open to Global Communities",
+            "community.body": "If you're bringing a community to Busan — or looking for a local partner in the city — BeDoor can help. We provide spaces, local connections, and the hospitality to make your time here count.",
+            "community.alt": "For global communities and partners visiting Busan, BeDoor is a local entry point — connecting you with the city through spaces, people, and hands-on support.",
 
             "contact.kicker": "Get in Touch",
-            "contact.headline": "Let's build spaces and\npartnerships in Busan.",
-            "contact.body": "For partnership inquiries, space collaborations, community initiatives, and project discussions, feel free to reach out.",
+            "contact.headline": "Looking for a local partner in Busan?",
+            "contact.body": "BeDoor works with communities, partners, and organizations looking to connect with Busan. Whether it's a visit, a collaboration, or a longer-term partnership — we'd like to hear from you.",
             "contact.addressLabel": "Address",
-            "contact.addressValue": "23F #2320, BIFC2, 128 Namdongcheon-ro, Nam-gu, Busan",
+            "contact.addressValue": "23F, BIFC2, 128 Namdongcheon-ro, Nam-gu, Busan",
             "contact.emailLabel": "Email",
             "contact.phoneLabel": "Office",
 
             "form.nameLabel": "Name",
             "form.namePlaceholder": "Jane Doe",
-            "form.phoneLabel": "Phone",
-            "form.phonePlaceholder": "+82-10-0000-0000",
+            "form.orgLabel": "Organization",
+            "form.orgPlaceholder": "Company or community name",
             "form.emailLabel": "Email",
             "form.emailPlaceholder": "example@email.com",
             "form.typeLabel": "Inquiry type",
             "form.typeOption1": "Partnership",
-            "form.typeOption2": "Space Collaboration",
-            "form.typeOption3": "Project",
-            "form.typeOption4": "Community / Ecosystem",
+            "form.typeOption2": "Community Visit",
+            "form.typeOption3": "Collaboration",
+            "form.typeOption4": "Event & Program",
             "form.typeOption5": "General",
             "form.messageLabel": "Message",
-            "form.messagePlaceholder": "Tell us about your needs in detail.",
-            "form.submit": "Send inquiry",
+            "form.messagePlaceholder": "Tell us how we can work together.",
+            "form.submit": "Contact Us",
 
-            "footer.tagline": "Building innovation-driven spaces in Korea.\nCommercial real estate & hospitality developer.",
+            "footer.tagline": "Busan-based local operator and community builder.\nWelcoming global communities to Busan.",
             "footer.company": "Company",
             "footer.ceo": "CEO: Hyeji Kim",
-            "footer.address": "Address: 23F #2320, BIFC2, 128 Namdongcheon-ro, Nam-gu, Busan",
-            "footer.registration": "Registration: Commercial Real Estate & Hospitality",
-            "footer.links": "Links",
-            "footer.privacy": "Privacy Policy",
-            "footer.terms": "Terms of Service",
-            "footer.sitemap": "Sitemap",
+            "footer.address": "Address: 23F, BIFC2, 128 Namdongcheon-ro, Nam-gu, Busan",
           },
 
           ja: {
-            "meta.title": "BEDOOR - Building innovation-driven spaces in Korea",
+            "meta.title": "BEDOOR - 釜山のローカルパートナー",
             "nav.languageLabel": "言語を選択",
-            "lang.ko": "韓国語",
             "lang.en": "英語",
             "lang.ja": "日本語",
-            "lang.zh": "中国語",
 
-            "nav.about": "紹介",
-            "nav.services": "サービス",
-            "nav.projects": "プロジェクト",
+            "nav.about": "BeDoorについて",
+            "nav.services": "事業内容",
+            "nav.work": "実績",
             "nav.contact": "お問い合わせ",
 
-            "hero.badge": "韓国発プレイスデベロッパー",
-            "hero.headlineTop": "創る、",
-            "hero.headlineBottom": "韓国発イノベーション空間",
+            "hero.badge": "釜山拠点",
+            "hero.headline": "釜山のローカルパートナー",
             "hero.subcopy":
-              "BeDoorは韓国を拠点とする商業不動産・ホスピタリティデベロッパーです。ビジネス、起業、コミュニティが共に成長できる空間を創ります。",
-            "hero.pill1Title": "不動産開発",
-            "hero.pill1Desc": "商業空間",
-            "hero.pill2Title": "ホスピタリティ＆運営",
-            "hero.pill2Desc": "空間マネジメント",
-            "hero.pill3Title": "コミュニティ＆エコシステム",
-            "hero.pill3Desc": "ファウンダーフレンドリー",
+              "BeDoorは、釜山を拠点とするローカルオペレーター＆コミュニティビルダーです。空間の運営、コミュニティづくり、そして世界中からの来訪者の受け入れを行っています。釜山とつながりたい方は、ぜひお声がけください。",
+            "hero.highlight": "釜山を訪れるグローバルコミュニティを歓迎します。",
+            "hero.cta": "お問い合わせ",
 
-            "about.badgeTop": "釜山金融地区",
-            "about.badgeBottom": "イノベーションハブ",
-            "about.kicker": "場所、信頼、長期ビジョン",
-            "about.headline": "BeDoorは韓国でイノベーション主導の\n空間を開発・運営しています。",
-            "about.body":
-              "場所に根ざした開発、ホスピタリティ、越境コラボレーション、コミュニティ主導の成長を通じて、地域のポテンシャルとグローバルネットワークをつなぎます。",
-            "about.feature1Title": "BIFC2イノベーションクラスター",
-            "about.feature1Body": "釜山BIFC2を中心にイノベーションクラスターを形成しています。",
-            "about.feature2Title": "ホスピタリティ主導の運営",
-            "about.feature2Body": "ファウンダー、パートナー、来訪者のための温かい空間を創ります。",
-            "about.feature3Title": "越境コラボレーション",
-            "about.feature3Body": "釜山と日本、そしてグローバルネットワークをつなぎます。",
-            "about.feature4Title": "ファウンダーフレンドリーな空間",
-            "about.feature4Body": "起業とコミュニティが共に育つ環境をデザインします。",
+            "about.badgeTop": "BIFC2 22F",
+            "about.badgeBottom": "ラウンジ＆コミュニティ",
+            "about.kicker": "BeDoorについて",
+            "about.body1":
+              "BeDoorは、釜山を拠点とするローカルオペレーター＆コミュニティビルダーです。空間の運営、コミュニティの育成、そしてホスピタリティ、ローカルパートナーシップ、現地でのサポートを通じて、世界中の人々が釜山とつながるお手伝いをしています。",
+            "about.body2":
+              "現在、釜山の金融地区にあるBIFC2 22Fラウンジの運営に参画しています。今後は、釜山駅、金海空港、釜山国際旅客ターミナルといった主要ゲートウェイに、コミュニティラウンジのネットワークを広げていくことを目指しています。",
+            "about.body3":
+              "2015年以降、釜山においてTechstars、WeWork、Start2Group、InnoEx、Edtech Asia、TechSauceなどのグローバルパートナーやコミュニティとともに活動してきました。",
 
-            "services.kicker": "私たちが創り、運営するもの",
-            "services.headline": "長期的な価値を生む空間、ホスピタリティ、エコシステム",
-            "services.realestate.title": "商業用不動産開発",
-            "services.realestate.body":
-              "韓国でイノベーション主導の商業空間を開発・活性化します。",
-            "services.realestate.b1": "商業空間の活性化",
-            "services.realestate.b2": "新興エリアのプレイス戦略",
-            "services.realestate.b3": "起業連動型不動産プロジェクト",
-            "services.hospitality.title": "ホスピタリティ＆空間運営",
-            "services.hospitality.body":
-              "ファウンダー、パートナー、来訪者を迎える共有ラウンジとコミュニティ空間を運営します。",
-            "services.hospitality.b1": "共有ラウンジ運営",
-            "services.hospitality.b2": "来訪者体験の設計",
-            "services.hospitality.b3": "ホスピタリティ主導の場づくり",
-            "services.community.title": "コミュニティ＆エコシステム構築",
+            "services.kicker": "事業内容",
+            "services.intro": "釜山を訪れる人々、パートナー、コミュニティのためのローカルな入口を創ります。",
+            "services.lounge.title": "ラウンジ運営",
+            "services.lounge.body":
+              "BIFC2 22Fラウンジの運営に参画し、日々のホスピタリティ、来訪者の体験、コミュニティとのつながりを形づくっています。",
+            "services.community.title": "コミュニティビルディング",
             "services.community.body":
-              "越境コラボレーションとファウンダーフレンドリーな環境で、長期的なコミュニティ成長を支援します。",
-            "services.community.b1": "ファウンダー・パートナーの参画",
-            "services.community.b2": "エコシステムパートナーシップ",
-            "services.community.b3": "コミュニティ主導の成長イニシアチブ",
+              "人や組織が釜山と有意義に関われるよう、関係づくり、プログラムの運営、ローカルなつながりの構築に取り組んでいます。",
+            "services.hosting.title": "グローバルコミュニティのホスティング",
+            "services.hosting.body":
+              "グローバルコミュニティが釜山を訪れる際、空間、紹介、現地の知見を通じて、本当のつながりが生まれるようサポートします。",
+            "services.gateway.title": "ゲートウェイ・ラウンジネットワーク",
+            "services.gateway.body":
+              "BIFC2 22Fラウンジを起点に、釜山の主要な到着拠点にラウンジネットワークを広げていくことを目指しています。都市が世界を迎え入れるための長期的なビジョンです。",
 
-            "portfolio.kicker": "プロジェクト",
-            "portfolio.headline": "韓国で創り上げる\n空間とエコシステム",
-            "portfolio.p1.category": "イノベーション地区",
-            "portfolio.p1.title": "釜山フィンテック・イノベーションクラスター",
-            "portfolio.p1.body": "場所に根ざした開発、エコシステム活性化、ファウンダーフレンドリーな空間戦略でBIFC2周辺のイノベーション地区を形成。",
-            "portfolio.p2.category": "グローバル協業",
-            "portfolio.p2.title": "越境エコシステム構築",
-            "portfolio.p2.body": "釜山と日本、ベトナム、グローバルパートナーをつなぐファウンダーフレンドリーなネットワークを構築。",
-            "portfolio.p3.category": "ローカルエコシステム",
-            "portfolio.p3.title": "ローカルクリエイター＆コミュニティ開発",
-            "portfolio.p3.body": "エコシステムプログラム、ネットワーキング、場所に根ざした成長を通じてローカルクリエイターとコミュニティ起業を支援。",
+            "work.kicker": "実績",
+            "work.p1.title": "BIFC2 22F ラウンジ",
+            "work.p1.body": "BeDoorは現在、釜山の金融地区にあるBIFC2 22Fラウンジの運営に参画しています。コミュニティ、コラボレーション、ホスピタリティのための共有空間です。",
+            "work.p2.title": "グローバルコミュニティとのつながり",
+            "work.p2.body": "過去10年にわたり釜山において、Techstars、WeWork、Start2Group、InnoEx、Edtech Asia、TechSauceなどのグローバルコミュニティとともに活動してきました。",
+            "work.p3.title": "将来のラウンジネットワーク",
+            "work.p3.body": "今後、釜山駅、金海空港、釜山国際旅客ターミナルなど、釜山の主要ゲートウェイにラウンジネットワークを構築していくことを目指しています。",
+
+            "community.kicker": "グローバルコミュニティへ",
+            "community.body": "コミュニティを釜山に連れてきたい方、釜山のローカルパートナーを探している方 — BeDoorがお手伝いします。空間、ローカルなつながり、そして滞在を実りあるものにするホスピタリティを提供します。",
+            "community.alt": "釜山を訪れるグローバルコミュニティやパートナーにとって、BeDoorはローカルな入口です。空間、人、現地でのサポートを通じて、都市とのつながりを創ります。",
 
             "contact.kicker": "お問い合わせ",
-            "contact.headline": "釜山で空間とパートナーシップを\n共に創りましょう。",
-            "contact.body": "パートナーシップ、空間コラボレーション、コミュニティ活動、プロジェクトのご相談など、お気軽にご連絡ください。",
+            "contact.headline": "釜山のローカルパートナーをお探しですか？",
+            "contact.body": "BeDoorは、釜山とつながりたいコミュニティ、パートナー、組織と連携しています。訪問、コラボレーション、長期的なパートナーシップなど、お気軽にご連絡ください。",
             "contact.addressLabel": "Address",
-            "contact.addressValue": "釜山 南区 南東川路128, BIFC2, 23階 2320号",
+            "contact.addressValue": "釜山 南区 南東川路128, BIFC2, 23階",
             "contact.emailLabel": "Email",
             "contact.phoneLabel": "Office",
 
             "form.nameLabel": "お名前",
             "form.namePlaceholder": "山田 太郎",
-            "form.phoneLabel": "連絡先",
-            "form.phonePlaceholder": "090-0000-0000",
+            "form.orgLabel": "組織名",
+            "form.orgPlaceholder": "会社名またはコミュニティ名",
             "form.emailLabel": "メールアドレス",
             "form.emailPlaceholder": "example@email.com",
             "form.typeLabel": "お問い合わせ種別",
             "form.typeOption1": "パートナーシップ",
-            "form.typeOption2": "空間コラボレーション",
-            "form.typeOption3": "プロジェクト",
-            "form.typeOption4": "コミュニティ / エコシステム",
+            "form.typeOption2": "コミュニティ訪問",
+            "form.typeOption3": "コラボレーション",
+            "form.typeOption4": "イベント・プログラム",
             "form.typeOption5": "その他",
-            "form.messageLabel": "お問い合わせ内容",
-            "form.messagePlaceholder": "内容をできるだけ詳しくご記入ください。",
-            "form.submit": "送信する",
+            "form.messageLabel": "メッセージ",
+            "form.messagePlaceholder": "どのように協力できるかお聞かせください。",
+            "form.submit": "お問い合わせ",
 
-            "footer.tagline": "Building innovation-driven spaces in Korea.\n商業不動産 & ホスピタリティデベロッパー",
+            "footer.tagline": "釜山を拠点とするローカルオペレーター＆コミュニティビルダー。\nグローバルコミュニティを釜山に迎え入れる。",
             "footer.company": "Company",
             "footer.ceo": "CEO: キム・ヘジ",
-            "footer.address": "Address: 釜山 南区 南東川路128, BIFC2, 23階 2320号",
-            "footer.registration": "Registration: 商業不動産 & ホスピタリティ",
-            "footer.links": "Links",
-            "footer.privacy": "Privacy Policy",
-            "footer.terms": "Terms of Service",
-            "footer.sitemap": "Sitemap",
-          },
-
-          zh: {
-            "meta.title": "BEDOOR - Building innovation-driven spaces in Korea",
-            "nav.languageLabel": "选择语言",
-            "lang.ko": "韩语",
-            "lang.en": "英语",
-            "lang.ja": "日语",
-            "lang.zh": "中文",
-
-            "nav.about": "关于",
-            "nav.services": "服务",
-            "nav.projects": "项目",
-            "nav.contact": "联系",
-
-            "hero.badge": "韩国空间开发商",
-            "hero.headlineTop": "打造",
-            "hero.headlineBottom": "韩国创新驱动空间",
-            "hero.subcopy": "BeDoor是一家总部位于韩国的商业地产与酒店管理开发商，致力于打造商业、创业与社区共同繁荣的空间。",
-            "hero.pill1Title": "地产开发",
-            "hero.pill1Desc": "商业空间",
-            "hero.pill2Title": "酒店管理与运营",
-            "hero.pill2Desc": "空间管理",
-            "hero.pill3Title": "社区与生态系统",
-            "hero.pill3Desc": "创业者友好",
-
-            "about.badgeTop": "釜山金融区",
-            "about.badgeBottom": "创新中心",
-            "about.kicker": "场所、信任与长期愿景",
-            "about.headline": "BeDoor在韩国开发和运营\n创新驱动的空间。",
-            "about.body":
-              "我们通过基于场所的开发、酒店管理、跨境合作和社区驱动的增长，将本地潜力与全球网络连接。",
-            "about.feature1Title": "BIFC2创新集群",
-            "about.feature1Body": "参与打造以釜山BIFC2为中心的创新集群。",
-            "about.feature2Title": "酒店管理驱动的运营",
-            "about.feature2Body": "为创始人、合作伙伴和访客打造温馨的空间。",
-            "about.feature3Title": "跨境合作",
-            "about.feature3Body": "连接釜山与日本及全球网络。",
-            "about.feature4Title": "创业者友好空间",
-            "about.feature4Body": "设计创业与社区共同成长的环境。",
-
-            "services.kicker": "我们建设和运营的",
-            "services.headline": "创造长期价值的空间、酒店管理和生态系统",
-            "services.realestate.title": "商业地产开发",
-            "services.realestate.body": "在韩国开发和激活创新驱动的商业空间。",
-            "services.realestate.b1": "商业空间激活",
-            "services.realestate.b2": "新兴区域场所策略",
-            "services.realestate.b3": "与创业联动的地产项目",
-            "services.hospitality.title": "酒店管理与空间运营",
-            "services.hospitality.body": "运营面向创始人、合作伙伴和访客的共享休息室和社区空间。",
-            "services.hospitality.b1": "共享休息室运营",
-            "services.hospitality.b2": "访客体验设计",
-            "services.hospitality.b3": "酒店管理驱动的场所激活",
-            "services.community.title": "社区与生态系统建设",
-            "services.community.body": "通过跨境合作和创业者友好环境支持长期社区增长。",
-            "services.community.b1": "创始人与合作伙伴参与",
-            "services.community.b2": "生态系统合作关系",
-            "services.community.b3": "社区驱动增长计划",
-
-            "portfolio.kicker": "我们的项目",
-            "portfolio.headline": "在韩国打造的\n空间与生态系统",
-            "portfolio.p1.category": "创新区域",
-            "portfolio.p1.title": "釜山金融科技创新集群",
-            "portfolio.p1.body": "通过基于场所的开发、生态系统激活和创业者友好空间策略，打造BIFC2周边创新区域。",
-            "portfolio.p2.category": "全球协作",
-            "portfolio.p2.title": "跨境生态系统建设",
-            "portfolio.p2.body": "构建连接釜山与日本、越南及全球合作伙伴的创业者友好网络。",
-            "portfolio.p3.category": "本地生态系统",
-            "portfolio.p3.title": "本地创作者与社区发展",
-            "portfolio.p3.body": "通过生态系统项目、网络建设和基于场所的增长，支持本地创作者和社区创业。",
-
-            "contact.kicker": "联系我们",
-            "contact.headline": "让我们在釜山共同\n打造空间与合作关系。",
-            "contact.body": "合作咨询、空间协作、社区计划、项目讨论等，欢迎随时联系。",
-            "contact.addressLabel": "Address",
-            "contact.addressValue": "釜山 南区 南东川路128, BIFC2, 23层 2320号",
-            "contact.emailLabel": "Email",
-            "contact.phoneLabel": "Office",
-
-            "form.nameLabel": "姓名",
-            "form.namePlaceholder": "张三",
-            "form.phoneLabel": "联系方式",
-            "form.phonePlaceholder": "010-0000-0000",
-            "form.emailLabel": "邮箱地址",
-            "form.emailPlaceholder": "example@email.com",
-            "form.typeLabel": "咨询类型",
-            "form.typeOption1": "合作",
-            "form.typeOption2": "空间协作",
-            "form.typeOption3": "项目",
-            "form.typeOption4": "社区 / 生态系统",
-            "form.typeOption5": "其他",
-            "form.messageLabel": "咨询内容",
-            "form.messagePlaceholder": "请尽量详细描述您的需求。",
-            "form.submit": "发送咨询",
-
-            "footer.tagline": "Building innovation-driven spaces in Korea.\n商业地产与酒店管理开发商",
-            "footer.company": "Company",
-            "footer.ceo": "CEO: 金惠智",
-            "footer.address": "Address: 釜山 南区 南东川路128, BIFC2, 23层 2320号",
-            "footer.registration": "Registration: 商业地产 & 酒店管理",
-            "footer.links": "Links",
-            "footer.privacy": "Privacy Policy",
-            "footer.terms": "Terms of Service",
-            "footer.sitemap": "Sitemap",
+            "footer.address": "Address: 釜山 南区 南東川路128, BIFC2, 23階",
           },
         };
 
         function safeLang(lang) {
-          return SUPPORTED.includes(lang) ? lang : "ko";
+          return SUPPORTED.includes(lang) ? lang : "en";
         }
 
         function t(lang, key) {
-          const dict = translations[lang] || translations.ko;
+          const dict = translations[lang] || translations.en;
           if (Object.prototype.hasOwnProperty.call(dict, key)) return dict[key];
-          if (Object.prototype.hasOwnProperty.call(translations.ko, key)) return translations.ko[key];
+          if (Object.prototype.hasOwnProperty.call(translations.en, key)) return translations.en[key];
           return null;
         }
 
